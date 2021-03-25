@@ -1,0 +1,48 @@
+Following is the result for entire testing
+
+R'NB =69
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Trying to connect 192.168.0.1
+192.168.0.1 is not reachable
+Router cannot connect to the 192.168.0.1
+Router looses the connection after  6 tries
+b"Following is the result for entire testing\n\nR'NB =69\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nTrying to connect 192.168.0.1\n192.168.0.1 is not reachable\nRouter cannot connect to the 192.168.0.1\nRouter looses the connection after  6 tries\n"
+C:\Users\siman\PycharmProjects\pythonProject1\logs .txt
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\siman\AppData\Local\Programs\Python\Python38\lib\tkinter\__init__.py", line 1883, in __call__
+    return self.func(*args)
+  File "C:/Users/siman/PycharmProjects/pythonProject1/gui.py", line 70, in submit
+    email()
+  File "C:/Users/siman/PycharmProjects/pythonProject1/gui.py", line 34, in email
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+  File "C:\Users\siman\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 1034, in __init__
+    SMTP.__init__(self, host, port, local_hostname, timeout,
+  File "C:\Users\siman\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 253, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Users\siman\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 339, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Users\siman\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 1040, in _get_socket
+    new_socket = socket.create_connection((host, port), timeout,
+  File "C:\Users\siman\AppData\Local\Programs\Python\Python38\lib\socket.py", line 787, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "C:\Users\siman\AppData\Local\Programs\Python\Python38\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed

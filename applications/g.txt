@@ -1,0 +1,58 @@
+C:\Users\siman\PycharmProjects\pythonProject1\venv\Scripts\python.exe C:/Users/siman/PycharmProjects/pythonProject1/gui.py
+Console output is saving to: C:\Users\siman\PycharmProjects\pythonProject1\logs .txt
+Following is the result for entire testing
+
+R'NB =80
+
+Firmware Version 3.0.27 (Rev 3563)
+Hardware Version 1.3
+Updating frimware
+firmware version uploading 
+frimware updated
+Rebooting......
+
+Removing non essential applications. please wait for 25secs
+00:25 00:24 00:23 00:22 00:21 00:20 00:19 00:18 00:17 00:16 00:15 00:14 00:13 00:12 00:11 00:10 00:09 00:08 00:07 00:06 00:05 00:04 00:03 00:02 00:01 
+Non essential application address do not exist
+Non essential application address do not exist
+Non essential application address do not exist
+Non essential application address do not exist
+Checking for the essential applications. please wait for 25secs
+00:25 00:24 00:23 00:22 00:21 00:20 00:19 00:18 00:17 00:16 00:15 00:14 00:13 00:12 00:11 00:10 00:09 00:08 00:07 00:06 00:05 00:04 00:03 00:02 00:01 Scanning for applications
+robustlink 3.0.1 Running RobustLink Client
+robustvpn 3.0.0 Stopped RobustVPN Client
+snmp 3.0.0 Running SNMP subagent
+rcms 3.0.4 Running rcms Client Connected to RCMS
+robustlink exist
+no upgrade required for robustlink
+Robustvpn exist
+no upgrades is required for robustVPN
+snmp exist
+no upgrades is required for snmp
+rcms exist
+rcms Updated
+ignore Invalid Settings  OFF
+Installing configuration file
+Saving changes
+Please wait while the configuration file is updating......
+192.168.0.1 is connected
+Lets validate the  configurations 
+
+Please validate the saved configurations
+
+Device Model= R3000-L4L
+Firmware Version 3.0.26 (Rev 3491)
+Hardware Version 1.3
+Serial Number = 12570718065036
+Active Link = 
+WWAN1 is Disconnected
+WWAN2 is Disconnected
+SIM1 hasnot been connected
+Waiting on SIM1 to be active. Please wait 2 minutes
+WWAN1 is Disconnected
+WWAN2 is Disconnected
+SIM1 hasnot been connected
+Waiting on SIM1 to be active. Please wait 2 minutes
+WWAN1 is Disconnected
+WWAN2 is Disconnected
+SIM1 hasnot been connected

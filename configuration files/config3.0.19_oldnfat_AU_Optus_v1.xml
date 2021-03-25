@@ -1,0 +1,1393 @@
+<XML_Config_File VersionNumber="1.3.7" FileType="ConfigFile">
+ <System_Conf>
+  <Device_Name default="Cellular Router" range="0-30">Router_Name</Device_Name>
+  <Max_Tcpconnect default="2048" range="512-2048">2048</Max_Tcpconnect>
+ </System_Conf>
+ <Cli_Conf>
+  <Connect_Timeout default="180" range="30-300">300</Connect_Timeout>
+  <CLI_Language default="English" range="English/Chinese">English</CLI_Language>
+ </Cli_Conf>
+ <Webconf>
+  <Iscookied default="no" range="yes/no">no</Iscookied>
+  <User_Management_List index_max="5" >
+     <Index1>
+       <Access_Level default="3" range="0-3">3</Access_Level>
+       <Username default="" range="0-30">admin</Username>
+       <Password default="" range="0-30">thinxtra</Password>
+     </Index1>
+  </User_Management_List>
+  <Timeout default="1800" range="60-3600">1800</Timeout>
+ </Webconf>
+ <Link_Management_Conf>
+  <Enable default="no" range="yes/no">no</Enable>
+  <WAN_Link default="dialup" range="wan/dialup/wifi">dialup</WAN_Link>
+  <BACKUP_Link default="none" range="none/wan/dialup/wifi">none</BACKUP_Link>
+  <Enable_Ping default="yes" range="yes/no">yes</Enable_Ping>
+  <ICMP_Detection_Primary_Server default="8.8.8.8" range="0-64">8.8.8.8</ICMP_Detection_Primary_Server>
+  <ICMP_Detection_Secondary_Server default="8.8.4.4" range="0-64">8.8.4.4</ICMP_Detection_Secondary_Server>
+  <ICMP_Detection_Interval default="30" range="1-1800">300</ICMP_Detection_Interval>
+  <ICMP_Detection_Timeout default="3" range="1-10">3</ICMP_Detection_Timeout>
+  <ICMP_Detection_Retries default="3" range="1-20">3</ICMP_Detection_Retries>
+  <Reset_The_Interface default="yes" range="yes/no">yes</Reset_The_Interface>
+ </Link_Management_Conf>
+ <Phonebook_Conf>
+  <Phonebook_List index_max="30" >
+     <Index1>
+       <Description default="" range="0-20">adrian</Description>
+       <Phone_Number default="" range="0-20">+61421483725</Phone_Number>
+     </Index1>
+     <Index2>
+       <Description default="" range="0-20">jasper</Description>
+       <Phone_Number default="" range="0-20">+5277</Phone_Number>
+     </Index2>
+  </Phonebook_List>
+ </Phonebook_Conf>
+ <Phonegroup_Conf>
+  <Phonegroup_List index_max="20" >
+     <Index1>
+       <Group_Name default="" range="0-20">admin</Group_Name>
+       <Phone_List default="xxx,yyy,zzz" range="Phone descriptions which are selected on the web">tugberk,jasper</Phone_List>
+     </Index1>
+  </Phonegroup_List>
+ </Phonegroup_Conf>
+ <DialupConf>
+  <Cellular_WAN_Enable default="yes" range="yes/no">yes</Cellular_WAN_Enable>
+  <SIM1_Provider_Type default="Custom_0" range="0-30">Custom_0</SIM1_Provider_Type>
+  <SIM1_Auto_APN default="yes" range="yes/no">no</SIM1_Auto_APN>
+  <SIM1_Dialnumber default="" range="0-30"></SIM1_Dialnumber>
+  <SIM1_Pin_Type default="None" range="None/Input/Lock/Unlock">None</SIM1_Pin_Type>
+  <SIM1_Pin_Code default="" range="0-8"></SIM1_Pin_Code>
+  <SIM1_New_Pin_Code default="" range="0-8"></SIM1_New_Pin_Code>
+  <SIM1_Puk_Code default="" range="0-8"></SIM1_Puk_Code>
+  <SIM2_Provider_Type default="Custom_1" range="0-30">Custom_1</SIM2_Provider_Type>
+  <SIM2_Auto_APN default="yes" range="yes/no">no</SIM2_Auto_APN>
+  <SIM2_Dialnumber default="" range="0-30"></SIM2_Dialnumber>
+  <SIM2_Pin_Type default="None" range="None/Input/Lock/Unlock">None</SIM2_Pin_Type>
+  <SIM2_Pin_Code default="" range="0-8"></SIM2_Pin_Code>
+  <SIM2_New_Pin_Code default="" range="0-8"></SIM2_New_Pin_Code>
+  <SIM2_Puk_Code default="" range="0-8"></SIM2_Puk_Code>
+  <Connection_Mode default="MODE_ALWAYS_ONLINE" range="MODE_ALWAYS_ONLINE/MODE_ON_DEMAND">MODE_ALWAYS_ONLINE</Connection_Mode>
+  <Redial_Interval default="30" range="1-120">30</Redial_Interval>
+  <Retries default="3" range="1-60">3</Retries>
+  <Inactivity_Time default="0" range="0-3600">0</Inactivity_Time>
+  <Serial_Output_Content default="" range="0-128"></Serial_Output_Content>
+  <Triggered_By_Serial_Data default="yes" range="yes/no">yes</Triggered_By_Serial_Data>
+  <Triggered_By_Tel default="no" range="yes/no">no</Triggered_By_Tel>
+  <Triggered_By_SMS default="no" range="yes/no">no</Triggered_By_SMS>
+  <SMS_Connect_Command default="" range="0-128"></SMS_Connect_Command>
+  <SMS_Disconnect_Command default="" range="0-128"></SMS_Disconnect_Command>
+  <SMS_Connect_Reply default="" range="0-128"></SMS_Connect_Reply>
+  <SMS_Disconnect_Reply default="" range="0-128"></SMS_Disconnect_Reply>
+  <Phone_Group default="NULL" range="Name of the phonegroup">NULL</Phone_Group>
+  <Triggered_By_IO default="no" range="yes/no">no</Triggered_By_IO>
+  <Periodically_Connect default="no" range="yes/no">no</Periodically_Connect>
+  <Periodically_Connect_Interval default="300" range="60-86400">300</Periodically_Connect_Interval>
+  <Time_Schedule_Enable default="no" range="yes/no">no</Time_Schedule_Enable>
+  <Time_Schedule default="" range="0-20"></Time_Schedule>
+  <Dialup_Time_Range_List index_max="5" >
+     <Index1>
+       <Name default="" range="0-20">schedule_1</Name>
+       <Date default="SUN,MON,TUE,WED,THU,FRI,SAT" range="SUN/MON/TUE/WED/THU/FRI/SAT">SUN,MON,TUE,WED,THU,FRI,SAT</Date>
+       <Time_Range1 default="08:10-12:00" range="00:00-23:59">08:10-12:00</Time_Range1>
+       <Time_Range2 default="08:10-12:00" range="00:00-23:59">14:10-20:15</Time_Range2>
+       <Time_Range3 default="08:10-12:00" range="00:00-23:59"></Time_Range3>
+     </Index1>
+  </Dialup_Time_Range_List>
+  <Main_SIM_Card default="SIM_1" range="SIM_AUTO/SIM_1/SIM_2">SIM_1</Main_SIM_Card>
+  <Connection_Fails_Switchover default="yes" range="yes/no">yes</Connection_Fails_Switchover>
+  <ICMP_Detection_Fails_Switchover default="no" range="yes/no">yes</ICMP_Detection_Fails_Switchover>
+  <Total_Ping default="10" range="5-100">5</Total_Ping>
+  <Average_Ping default="400" range="100-5000">1000</Average_Ping>
+  <Total_Loss default="30" range="0-100">70</Total_Loss>
+  <Roaming_Detected_Switchover default="no" range="yes/no">no</Roaming_Detected_Switchover>
+  <Preferred_PLMN default="" range="0-17"></Preferred_PLMN>
+  <IO_Active_Switchover default="no" range="yes/no">no</IO_Active_Switchover>
+  <Data_Exceeded_Switchover default="no" range="yes/no">no</Data_Exceeded_Switchover>
+  <Exceeded_Mode default="CARD_STAY" range="CARD_STAY/CARD_SWITCHBACK/CARD_STAY_CLEAR">CARD_STAY</Exceeded_Mode>
+  <SIM1_Max_Data_Limitation default="100" range="1-2097152">100</SIM1_Max_Data_Limitation>
+  <SIM2_Max_Data_Limitation default="100" range="1-2097152">100</SIM2_Max_Data_Limitation>
+  <SIM1_Date_Of_Month_To_Clean default="1" range="1-31">1</SIM1_Date_Of_Month_To_Clean>
+  <SIM2_Date_Of_Month_To_Clean default="1" range="1-31">1</SIM2_Date_Of_Month_To_Clean>
+  <After_Timeout_Switchover default="yes" range="yes/no">yes</After_Timeout_Switchover>
+  <Initial_Timeout default="60" range="1-10000">850</Initial_Timeout>
+  <SIM1_Phone_Number default="" range="0-30"></SIM1_Phone_Number>
+  <SIM1_Network_Type default="WL_NETWORK_AUTO" range="WL_NETWORK_AUTO/WL_NETWORK_2G/WL_NETWORK_3G/WL_NETWORK_4G">WL_NETWORK_AUTO</SIM1_Network_Type>
+  <SIM1_Band_Mode default="" range="0-30">0</SIM1_Band_Mode>
+  <SIM1_Band_Mode_LTE default="" range="0-30">7FFFFFFFFFFFFFFF</SIM1_Band_Mode_LTE>
+  <SIM1_Authentication default="DIALUP_AUTH_AUTO" range="DIALUP_AUTH_AUTO/DIALUP_AUTH_PAP/DIALUP_AUTH_CHAP">DIALUP_AUTH_AUTO</SIM1_Authentication>
+  <SIM1_MTU default="1500" range="64-1500">1500</SIM1_MTU>
+  <SIM1_MRU default="1500" range="64-1500">1500</SIM1_MRU>
+  <SIM1_Asyncmap_Value default="ffffffff" range="0-8">ffffffff</SIM1_Asyncmap_Value>
+  <SIM1_Use_Peer_DNS default="yes" range="yes/no">yes</SIM1_Use_Peer_DNS>
+  <SIM1_Primary_DNS_Server default="0.0.0.0">0.0.0.0</SIM1_Primary_DNS_Server>
+  <SIM1_Secondary_DNS_Server default="0.0.0.0">0.0.0.0</SIM1_Secondary_DNS_Server>
+  <SIM1_AddressOrControl_Compression default="no" range="yes/no">no</SIM1_AddressOrControl_Compression>
+  <SIM1_Protocol_Field_Compression default="no" range="yes/no">no</SIM1_Protocol_Field_Compression>
+  <SIM1_Expert_Options default="noccp nobsdcomp" range="0-50">nodeflate nobsdcomp novj novjccomp noccp</SIM1_Expert_Options>
+  <SIM2_Phone_Number default="" range="0-30"></SIM2_Phone_Number>
+  <SIM2_Network_Type default="WL_NETWORK_AUTO" range="WL_NETWORK_AUTO/WL_NETWORK_2G/WL_NETWORK_3G/WL_NETWORK_4G">WL_NETWORK_AUTO</SIM2_Network_Type>
+  <SIM2_Band_Mode default="" range="0-30">0</SIM2_Band_Mode>
+  <SIM2_Band_Mode_LTE default="" range="0-30">7FFFFFFFFFFFFFFF</SIM2_Band_Mode_LTE>
+  <SIM2_Authentication default="DIALUP_AUTH_AUTO" range="DIALUP_AUTH_AUTO/DIALUP_AUTH_PAP/DIALUP_AUTH_CHAP">DIALUP_AUTH_AUTO</SIM2_Authentication>
+  <SIM2_MTU default="1500" range="64-1500">1500</SIM2_MTU>
+  <SIM2_MRU default="1500" range="64-1500">1500</SIM2_MRU>
+  <SIM2_Asyncmap_Value default="ffffffff" range="0-8">ffffffff</SIM2_Asyncmap_Value>
+  <SIM2_Use_Peer_DNS default="yes" range="yes/no">yes</SIM2_Use_Peer_DNS>
+  <SIM2_Primary_DNS_Server default="0.0.0.0">0.0.0.0</SIM2_Primary_DNS_Server>
+  <SIM2_Secondary_DNS_Server default="0.0.0.0">0.0.0.0</SIM2_Secondary_DNS_Server>
+  <SIM2_AddressOrControl_Compression default="no" range="yes/no">no</SIM2_AddressOrControl_Compression>
+  <SIM2_Protocol_Field_Compression default="no" range="yes/no">no</SIM2_Protocol_Field_Compression>
+  <SIM2_Expert_Options default="noccp nobsdcomp" range="0-50">nodeflate nobsdcomp novj novjccomp noccp</SIM2_Expert_Options>
+  <ISP_Profile_List index_max="8" >
+     <Index1>
+       <ISP default="" range="0-30">Custom_0</ISP>
+       <APN default="" range="0-50">om2moptus</APN>
+       <Dialup_Number default="" range="0-30"></Dialup_Number>
+       <Username default="" range="0-50"></Username>
+       <Password default="" range="0-50"></Password>
+     </Index1>
+     <Index2>
+       <ISP default="" range="0-30">Custom_1</ISP>
+       <APN default="" range="0-50">telstra.internet</APN>
+       <Dialup_Number default="" range="0-30"></Dialup_Number>
+       <Username default="" range="0-50"></Username>
+       <Password default="" range="0-50"></Password>
+     </Index2>
+  </ISP_Profile_List>
+  <Roaming_Network_Enable default="no" range="yes/no">no</Roaming_Network_Enable>
+  <Signal_Threshold default="0" range="0-31">0</Signal_Threshold>
+  <Prefered_PLMN default="" range="0-16"></Prefered_PLMN>
+  <PLMN_APN_List index_max="8" >
+     <Index1>
+       <PLMN_isUse default="no" range="yes/no">no</PLMN_isUse>
+       <PLMN_Decription default="" range="0-30"></PLMN_Decription>
+       <PLMN_PLMN default="" range="0-16"></PLMN_PLMN>
+       <PLMN_APN default="" range="0-50"></PLMN_APN>
+       <PLMN_UsName default="" range="0-50"></PLMN_UsName>
+       <PLMN_PassWord default="" range="0-50"></PLMN_PassWord>
+     </Index1>
+  </PLMN_APN_List>
+  <NatFuntion_Enable default="yes" range="yes/no">yes</NatFuntion_Enable>
+ </DialupConf>
+ <Eth0_Conf>
+  <Eth0_WAN_Enable default="no" range="yes/no">no</Eth0_WAN_Enable>
+  <NatFuntion_Enable default="yes" range="yes/no">yes</NatFuntion_Enable>
+  <WAN_Link default="wan_dhcp" range="wan_static/wan_dhcp/wan_pppoe">wan_static</WAN_Link>
+  <Enable_Bridge default="yes" range="yes/no">yes</Enable_Bridge>
+  <IP_Address default="0.0.0.0">192.168.1.244</IP_Address>
+  <NetMask default="0.0.0.0">255.255.255.0</NetMask>
+  <Gateway default="0.0.0.0">192.168.1.1</Gateway>
+  <MTU default="1500" range="68-1500">1500</MTU>
+  <Media_Type default="AUTO" range="AUTO/10M_FULL_DUPLEX/10M_HALF_DUPLEX/100M_FULL_DUPLEX/100M_HALF_DUPLEX">AUTO</Media_Type>
+  <Primary_DNS_Server default="0.0.0.0">192.168.1.1</Primary_DNS_Server>
+  <Secondary_DNS_Server default="0.0.0.0">8.8.8.8</Secondary_DNS_Server>
+  <Eth0_Multiple_IP_Address_List index_max="5" >
+     <Index1>
+       <IP_Address default="0.0.0.0">0.0.0.0</IP_Address>
+       <NetMask default="0.0.0.0">0.0.0.0</NetMask>
+     </Index1>
+  </Eth0_Multiple_IP_Address_List>
+ </Eth0_Conf>
+ <Eth1_Conf>
+  <IP_Address default="192.168.0.1">192.168.39.49</IP_Address>
+  <NetMask default="255.255.255.0">255.255.255.248</NetMask>
+  <Gateway default="0.0.0.0">0.0.0.0</Gateway>
+  <MTU default="1500" range="68-1500">1500</MTU>
+  <Media_Type default="AUTO" range="AUTO/10M_FULL_DUPLEX/10M_HALF_DUPLEX/100M_FULL_DUPLEX/100M_HALF_DUPLEX">AUTO</Media_Type>
+  <Eth1_Multiple_IP_Address_List index_max="5" >
+     <Index1>
+       <IP_Address default="0.0.0.0">0.0.0.0</IP_Address>
+       <NetMask default="0.0.0.0">0.0.0.0</NetMask>
+     </Index1>
+  </Eth1_Multiple_IP_Address_List>
+ </Eth1_Conf>
+ <Eth0_DHCP_Server_Conf>
+  <Enable_DHCP_Server default="no" range="yes/no">no</Enable_DHCP_Server>
+  <IP_Pool_Start default="0.0.0.0">0.0.0.0</IP_Pool_Start>
+  <IP_Pool_End default="0.0.0.0">0.0.0.0</IP_Pool_End>
+  <NetMask default="0.0.0.0">0.0.0.0</NetMask>
+  <Lease_Time default="60" range="1-10080">60</Lease_Time>
+  <Primary_DNS_Server default="0.0.0.0">0.0.0.0</Primary_DNS_Server>
+  <Secondary_DNS_Server default="0.0.0.0">0.0.0.0</Secondary_DNS_Server>
+  <Windows_Name_Server default="0.0.0.0">0.0.0.0</Windows_Name_Server>
+  <Eth0_Static_Lease_List index_max="20" >
+     <Index1>
+       <MAC_Address default="00:00:00:00:00:00">00:00:00:00:00:00</MAC_Address>
+       <IP_Address default="0.0.0.0">0.0.0.0</IP_Address>
+     </Index1>
+  </Eth0_Static_Lease_List>
+ </Eth0_DHCP_Server_Conf>
+ <Eth1_DHCP_Server_Conf>
+  <Enable_DHCP_Server default="yes" range="yes/no">yes</Enable_DHCP_Server>
+  <IP_Pool_Start default="192.168.0.2">192.168.39.50</IP_Pool_Start>
+  <IP_Pool_End default="192.168.0.100">192.168.39.54</IP_Pool_End>
+  <NetMask default="255.255.255.0">255.255.255.248</NetMask>
+  <Lease_Time default="60" range="1-10080">3600</Lease_Time>
+  <Primary_DNS_Server default="192.168.0.1">192.168.39.49</Primary_DNS_Server>
+  <Secondary_DNS_Server default="0.0.0.0">0.0.0.0</Secondary_DNS_Server>
+  <Windows_Name_Server default="192.168.0.1">192.168.39.49</Windows_Name_Server>
+  <Eth1_Static_Lease_List index_max="20" >
+     <Index1>
+       <MAC_Address default="00:00:00:00:00:00">00:00:00:00:00:00</MAC_Address>
+       <IP_Address default="0.0.0.0">0.0.0.0</IP_Address>
+     </Index1>
+  </Eth1_Static_Lease_List>
+ </Eth1_DHCP_Server_Conf>
+ <Eth0_DHCP_Client_Conf>
+  <DHCP_Client_Enable default="no" range="yes/no">no</DHCP_Client_Enable>
+  <Use_Peer_DNS default="yes" range="yes/no">yes</Use_Peer_DNS>
+  <Netmask default="0.0.0.0">0.0.0.0</Netmask>
+  <Gateway default="0.0.0.0">0.0.0.0</Gateway>
+ </Eth0_DHCP_Client_Conf>
+ <Pppoe_Conf>
+  <Enable default="no" range="yes/no">no</Enable>
+  <Username default="" range="0-50"></Username>
+  <Password default="" range="0-50"></Password>
+  <Connnection_Mode default="MODE_ALWAYS_ONLINE" range="MODE_ALWAYS_ONLINE/MODE_ON_DEMAND">MODE_ALWAYS_ONLINE</Connnection_Mode>
+  <Redial_Interval default="30" range="1-120">30</Redial_Interval>
+  <Retries default="3" range="1-60">3</Retries>
+  <Inactivity_Time default="0" range="0-3600">0</Inactivity_Time>
+  <Serial_Output_Content default="" range="0-128"></Serial_Output_Content>
+  <Triggered_By_Serial_Data default="yes" range="yes/no">yes</Triggered_By_Serial_Data>
+  <Triggered_By_IO default="no" range="yes/no">no</Triggered_By_IO>
+  <Periodically_Connect default="no" range="yes/no">no</Periodically_Connect>
+  <Periodically_Connect_Interval default="300" range="60-86400">300</Periodically_Connect_Interval>
+  <Time_Schedule_Enable default="no" range="yes/no">no</Time_Schedule_Enable>
+  <Time_Schedule default="" range="0-20"></Time_Schedule>
+  <Pppoe_Time_Range_List index_max="5" >
+     <Index1>
+       <Name default="" range="0-20">schedule_1</Name>
+       <Date default="SUN,MON,TUE,WED,THU,FRI,SAT" range="SUN/MON/TUE/WED/THU/FRI/SAT">SUN,MON,TUE,WED,THU,FRI,SAT</Date>
+       <Time_Range1 default="08:10-12:00" range="00:00-23:59">08:10-12:00</Time_Range1>
+       <Time_Range2 default="08:10-12:00" range="00:00-23:59">14:10-20:15</Time_Range2>
+       <Time_Range3 default="08:10-12:00" range="00:00-23:59"></Time_Range3>
+     </Index1>
+  </Pppoe_Time_Range_List>
+  <Service_Name default="" range="0-50"></Service_Name>
+  <Local_IP_Address default="0.0.0.0">0.0.0.0</Local_IP_Address>
+  <Remote_IP_Address default="0.0.0.0">0.0.0.0</Remote_IP_Address>
+  <Authentication default="DIALUP_AUTH_AUTO" range="DIALUP_AUTH_AUTO/DIALUP_AUTH_PAP/DIALUP_AUTH_CHAP">DIALUP_AUTH_AUTO</Authentication>
+  <Use_Peer_DNS default="yes" range="yes/no">yes</Use_Peer_DNS>
+  <Show_Advanced default="no" range="yes/no">no</Show_Advanced>
+  <AddressOrControl_Compression default="yes" range="yes/no">no</AddressOrControl_Compression>
+  <Protocol_Field_Compression default="yes" range="yes/no">no</Protocol_Field_Compression>
+  <Asyncmap_Value default="ffffffff" range="0-8">ffffffff</Asyncmap_Value>
+  <MTU default="1492" range="68-1500">1492</MTU>
+  <MRU default="1500" range="68-1500">1500</MRU>
+  <Link_Detection_Interval default="60" range="3-60">30</Link_Detection_Interval>
+  <Link_Detection_Max_Retries default="5" range="3-5">5</Link_Detection_Max_Retries>
+  <Expert_Options default="noccp nobsdcomp" range="0-50">nodeflate nobsdcomp novj novjccomp noccp</Expert_Options>
+ </Pppoe_Conf>
+ <Rs232_Conf>
+  <Baudrate default="115200" range="300-230400">9600</Baudrate>
+  <Data_Bit default="8" range="7-8">8</Data_Bit>
+  <Parity default="None" range="None/Odd/Even">None</Parity>
+  <Stop_Bit default="1" range="1-2">1</Stop_Bit>
+  <Flow_Control default="none" range="none/hardware/software">none</Flow_Control>
+ </Rs232_Conf>
+ <Rs485_Conf>
+  <Baudrate default="115200" range="300-230400">115200</Baudrate>
+  <Data_Bit default="8" range="7-8">8</Data_Bit>
+  <Parity default="None" range="None/Odd/Even">None</Parity>
+  <Stop_Bit default="1" range="1-2">1</Stop_Bit>
+ </Rs485_Conf>
+ <Rs232dtuConf>
+  <Enable default="no" range="yes/no">yes</Enable>
+  <Bridge default="no" range="yes/no">no</Bridge>
+  <Protocol default="DTU_TRANSPARENT" range="DTU_TRANSPARENT/DTU_MODBUS_MASTER/DTU_MODBUS_OVER_TCP/DTU_TRANSPARENT_OVER_RLINK/DTU_MODBUS_OVER_RLINK/DTU_AT_OVER_COM/DTU_GPS_REPORT">DTU_TRANSPARENT</Protocol>
+  <Protocol_Type default="TCP" range="TCP/UDP">TCP</Protocol_Type>
+  <Protocol_Mode default="PROTOCOL_SERVER" range="PROTOCOL_SERVER/PROTOCOL_CLIENT">PROTOCOL_SERVER</Protocol_Mode>
+  <Local_IP_Address default="0.0.0.0">0.0.0.0</Local_IP_Address>
+  <Local_Port default="0" range="0-65535">502</Local_Port>
+  <Enable_AT_Command default="no" range="yes/no">no</Enable_AT_Command>
+  <Rs232_Multiple_Server_List index_max="5" >
+     <Index1>
+       <Server_IP default="" range="0-64"></Server_IP>
+       <Server_Port default="0" range="1-65535">0</Server_Port>
+       <Send_Data_To_Serial default="no" range="yes/no">no</Send_Data_To_Serial>
+     </Index1>
+  </Rs232_Multiple_Server_List>
+  <Show_Advanced default="no" range="yes/no">no</Show_Advanced>
+  <Interval_Timeout default="10" range="1-1000">10</Interval_Timeout>
+  <Packet_Length default="1360" range="0-1460">1360</Packet_Length>
+  <Enable_Delimiter1 default="no" range="yes/no">no</Enable_Delimiter1>
+  <Delimiter1 default="0" range="0-2">0</Delimiter1>
+  <Enable_Delimiter2 default="no" range="yes/no">no</Enable_Delimiter2>
+  <Delimiter2 default="0" range="0-2">0</Delimiter2>
+  <Delimiter_Process default="P_STRIP" range="P_DO_NOTHING/P_STRIP">P_STRIP</Delimiter_Process>
+  <Modbus_Type default="MODBUS_RTU" range="MODBUS_RTU/MODBUS_ASCII">MODBUS_RTU</Modbus_Type>
+  <Modbus_Mode default="MODBUS_SLAVE" range="MODBUS_MASTER/MODBUS_SLAVE">MODBUS_SLAVE</Modbus_Mode>
+  <Rs232_Modbus_Slave_List index_max="5" >
+     <Index1>
+       <Slave_Address default="" range="0-64"></Slave_Address>
+       <Slave_Port default="0" range="1-65535">0</Slave_Port>
+       <ID_Min default="0" range="1-247">0</ID_Min>
+       <ID_Max default="0" range="1-247">0</ID_Max>
+     </Index1>
+  </Rs232_Modbus_Slave_List>
+ </Rs232dtuConf>
+ <Rs485dtuConf>
+  <Enable default="no" range="yes/no">no</Enable>
+  <Protocol default="DTU_TRANSPARENT" range="DTU_TRANSPARENT/DTU_MODBUS_MASTER/DTU_MODBUS_OVER_TCP/DTU_TRANSPARENT_OVER_RLINK/DTU_MODBUS_OVER_RLINK/DTU_AT_OVER_COM/DTU_GPS_REPORT">DTU_TRANSPARENT</Protocol>
+  <Protocol_Type default="TCP" range="TCP/UDP">TCP</Protocol_Type>
+  <Protocol_Mode default="PROTOCOL_SERVER" range="PROTOCOL_SERVER/PROTOCOL_CLIENT">PROTOCOL_SERVER</Protocol_Mode>
+  <Local_IP_Address default="0.0.0.0">0.0.0.0</Local_IP_Address>
+  <Local_Port default="0" range="0-65535">0</Local_Port>
+  <Rs485_Multiple_Server_List index_max="5" >
+     <Index1>
+       <Server_IP default="" range="0-64"></Server_IP>
+       <Server_Port default="0" range="1-65535">0</Server_Port>
+       <Send_Data_To_Serial default="no" range="yes/no">no</Send_Data_To_Serial>
+     </Index1>
+  </Rs485_Multiple_Server_List>
+  <Show_Advanced default="no" range="yes/no">no</Show_Advanced>
+  <Interval_Timeout default="10" range="1-1000">10</Interval_Timeout>
+  <Packet_Length default="1360" range="0-1460">1360</Packet_Length>
+  <Enable_Delimiter1 default="no" range="yes/no">no</Enable_Delimiter1>
+  <Delimiter1 default="0" range="0-2">0</Delimiter1>
+  <Enable_Delimiter2 default="no" range="yes/no">no</Enable_Delimiter2>
+  <Delimiter2 default="0" range="0-2">0</Delimiter2>
+  <Delimiter_Process default="P_STRIP" range="P_DO_NOTHING/P_STRIP">P_STRIP</Delimiter_Process>
+  <Modbus_Type default="MODBUS_RTU" range="MODBUS_RTU/MODBUS_ASCII">MODBUS_RTU</Modbus_Type>
+  <Modbus_Mode default="MODBUS_SLAVE" range="MODBUS_MASTER/MODBUS_SLAVE">MODBUS_SLAVE</Modbus_Mode>
+  <Rs485_Modbus_Slave_List index_max="5" >
+     <Index1>
+       <Slave_Address default="" range="0-64"></Slave_Address>
+       <Slave_Port default="0" range="1-65535">0</Slave_Port>
+       <ID_Min default="0" range="1-247">0</ID_Min>
+       <ID_Max default="0" range="1-247">0</ID_Max>
+     </Index1>
+  </Rs485_Modbus_Slave_List>
+ </Rs485dtuConf>
+ <DI_Conf>
+  <DI_Configuration_List index_max="2" >
+     <Index1>
+       <Enable_DI default="no" range="yes/no">no</Enable_DI>
+       <Mode default="DI_MODE_OFF" range="DI_MODE_ON/DI_MODE_OFF/DI_MODE_EVENT_COUNTER">DI_MODE_ON</Mode>
+       <Filtering default="1" range="0-100">1</Filtering>
+       <Counter_Trigger default="0" range="0-100">0</Counter_Trigger>
+       <Counter_Active default="COUNTER_HI_TO_LO" range="COUNTER_HI_TO_LO/COUNTER_LO_TO_HI">COUNTER_HI_TO_LO</Counter_Active>
+       <Counter_Start_When_Power_On default="yes" range="yes/no">yes</Counter_Start_When_Power_On>
+       <SMS_Alarm_List index_max="5" >
+          <Index1>
+            <Triggering_Alarm default="" range="0-128"></Triggering_Alarm>
+            <Recovering_Alarm default="" range="0-128"></Recovering_Alarm>
+            <Phone_Group default="NULL" range="Name of the phonegroup">NULL</Phone_Group>
+          </Index1>
+       </SMS_Alarm_List>
+     </Index1>
+  </DI_Configuration_List>
+ </DI_Conf>
+ <DO_Conf>
+  <DO_Configuration_List index_max="2" >
+     <Index1>
+       <Enable default="no" range="yes/no">no</Enable>
+       <Alarm_Source default="" range="DI_ALARM/SMS_CTRL/CALL_CTRL"></Alarm_Source>
+       <Alarm_On_Action default="DO_ACTION_ON" range="DO_ACTION_ON/DO_ACTION_OFF/DO_ACTION_PULSE">DO_ACTION_ON</Alarm_On_Action>
+       <Power_Off_Delay default="0" range="0-2400">0</Power_Off_Delay>
+       <Alarm_Off_Action default="DO_ACTION_ON" range="DO_ACTION_ON/DO_ACTION_OFF/DO_ACTION_PULSE">DO_ACTION_ON</Alarm_Off_Action>
+       <Status_When_Power_On default="LAST_STATUS" range="LAST_STATUS/ON/OFF">LAST_STATUS</Status_When_Power_On>
+       <Keep_On default="0" range="0-600">0</Keep_On>
+       <Delay default="0" range="0-3000">0</Delay>
+       <Low default="10" range="1-3000">10</Low>
+       <High default="10" range="1-3000">10</High>
+       <Output default="0" range="0-3000">0</Output>
+       <SMS_Content_On default="" range="0-128"></SMS_Content_On>
+       <SMS_Content_Off default="" range="0-128"></SMS_Content_Off>
+       <SMS_Content_On_Reply default="" range="0-128"></SMS_Content_On_Reply>
+       <SMS_Content_Off_Reply default="" range="0-128"></SMS_Content_Off_Reply>
+       <Phone_Group default="NULL" range="Name of the phonegroup">NULL</Phone_Group>
+     </Index1>
+  </DO_Configuration_List>
+ </DO_Conf>
+ <Usb_Conf>
+  <Enable_Automatic_Update_Of_Configuration default="yes" range="yes/no">no</Enable_Automatic_Update_Of_Configuration>
+  <Enable_Automatic_Update_Of_Firmware default="yes" range="yes/no">no</Enable_Automatic_Update_Of_Firmware>
+ </Usb_Conf>
+ <Dmz_Conf>
+  <Enable_DMZ default="no" range="yes/no">no</Enable_DMZ>
+  <Source_Address default="0.0.0.0">0.0.0.0</Source_Address>
+  <Source_Mask default="0.0.0.0">0.0.0.0</Source_Mask>
+  <DMZ_Host default="0.0.0.0">0.0.0.0</DMZ_Host>
+ </Dmz_Conf>
+ <Static_Route_Conf>
+  <Static_Route_Table_List index_max="16" >
+     <Index1>
+       <Interface default="IF_UNKNOWN" range="IF_UNKNOWN/IF_WAN/IF_DMZ/IF_LAN_0/IF_LAN_1/IF_LAN_2/IF_LAN_3">IF_UNKNOWN</Interface>
+       <Destination default="0.0.0.0">0.0.0.0</Destination>
+       <NetMask default="0.0.0.0">0.0.0.0</NetMask>
+       <Gateway default="0.0.0.0">0.0.0.0</Gateway>
+     </Index1>
+  </Static_Route_Table_List>
+ </Static_Route_Conf>
+ <Filtering_Conf>
+  <Local_Access_Using_HTTP default="yes" range="yes/no">yes</Local_Access_Using_HTTP>
+  <Remote_Access_Using_HTTPS default="yes" range="yes/no">yes</Remote_Access_Using_HTTPS>
+  <Remote_Access_Using_TELNET default="no" range="yes/no">yes</Remote_Access_Using_TELNET>
+  <Remote_Access_Using_HTTP default="no" range="yes/no">yes</Remote_Access_Using_HTTP>
+  <Remote_Access_Using_SNMP default="no" range="yes/no">yes</Remote_Access_Using_SNMP>
+  <Remote_Access_Using_SSH2 default="no" range="yes/no">yes</Remote_Access_Using_SSH2>
+  <Remote_Ping_Request default="yes" range="yes/no">yes</Remote_Ping_Request>
+  <Enable_DNS_Masqureade default="yes" range="yes/no">yes</Enable_DNS_Masqureade>
+  <Enable_Console_CLI default="yes" range="yes/no">yes</Enable_Console_CLI>
+  <Defend_DoS_Attack default="yes" range="yes/no">yes</Defend_DoS_Attack>
+  <Default_Filter_Policy default="accept" range="drop/accept">accept</Default_Filter_Policy>
+  <Filter_List index_max="20" >
+     <Index1>
+       <Action default="accept" range="drop/accept">drop</Action>
+       <Description default="" range="0-20"></Description>
+       <Source_IP_Address default="0.0.0.0">0.0.0.0</Source_IP_Address>
+       <Source_Net_Mask default="0.0.0.0">0.0.0.0</Source_Net_Mask>
+       <Target_IP_Address default="0.0.0.0">0.0.0.0</Target_IP_Address>
+       <Target_Net_Mask default="0.0.0.0">0.0.0.0</Target_Net_Mask>
+       <Source_Port_Min default="0" range="0-65535">0</Source_Port_Min>
+       <Source_Port_Max default="0" range="0-65535">0</Source_Port_Max>
+       <Target_Port_Min default="0" range="0-65535">0</Target_Port_Min>
+       <Target_Port_Max default="0" range="0-65535">0</Target_Port_Max>
+       <Protocol default="TCP" range="TCP/UDP/ICMP/TCP_AND_UDP/ALL">TCP</Protocol>
+     </Index1>
+  </Filter_List>
+  <Filter_URL_List index_max="10" >
+     <Index1>
+       <Filter_isUse default="no" range="yes/no">no</Filter_isUse>
+       <Filter_Description default="" range="0-20"></Filter_Description>
+       <Filter_URL default="" range="1-80"></Filter_URL>
+     </Index1>
+  </Filter_URL_List>
+  <Filter_Keywork_List index_max="10" >
+     <Index1>
+       <Filter_isUse default="no" range="yes/no">no</Filter_isUse>
+       <Filter_Description default="" range="0-20"></Filter_Description>
+       <Filter_Keywork default="" range="1-64"></Filter_Keywork>
+     </Index1>
+  </Filter_Keywork_List>
+ </Filtering_Conf>
+ <Mac_IP_Bunding_Conf>
+  <MAC_IP_Bunding_List index_max="20" >
+     <Index1>
+       <Description default="" range="0-20"></Description>
+       <MAC_Address default="00:00:00:00:00:00">00:00:00:00:00:00</MAC_Address>
+       <IP_Address default="0.0.0.0">0.0.0.0</IP_Address>
+     </Index1>
+  </MAC_IP_Bunding_List>
+ </Mac_IP_Bunding_Conf>
+ <Port_Map_Conf>
+  <Port_Forwarding_List index_max="50" >
+     <Index1>
+       <Description default="" range="0-20"></Description>
+       <Remote_IP_Address default="0.0.0.0">0.0.0.0</Remote_IP_Address>
+       <Remote_Net_Mask default="0.0.0.0">0.0.0.0</Remote_Net_Mask>
+       <Arrives_At_Port_Min default="0" range="0-65535">0</Arrives_At_Port_Min>
+       <Arrives_At_Port_Max default="0" range="0-65535">0</Arrives_At_Port_Max>
+       <Is_Forwarded_To_IP_Address default="0.0.0.0">0.0.0.0</Is_Forwarded_To_IP_Address>
+       <Is_Forwarded_To_Port_Min default="0" range="0-65535">0</Is_Forwarded_To_Port_Min>
+       <Is_Forwarded_To_Port_Max default="0" range="0-65535">0</Is_Forwarded_To_Port_Max>
+       <Protocol default="TCP" range="TCP/UDP/TCP_AND_UDP">TCP</Protocol>
+     </Index1>
+  </Port_Forwarding_List>
+ </Port_Map_Conf>
+ <Firewall_Access>
+  <Access_List index_max="5" >
+     <Index1>
+       <Access_Isuse default="" range="yes/no">no</Access_Isuse>
+       <Access_Description default="" range="0-20"></Access_Description>
+       <Access_Addr default="0.0.0.0">0.0.0.0</Access_Addr>
+       <Access_Netmask default="0.0.0.0">0.0.0.0</Access_Netmask>
+     </Index1>
+  </Access_List>
+ </Firewall_Access>
+ <Rip_Conf>
+  <Enable_RIP_Protocol_Setting default="no" range="yes/no">no</Enable_RIP_Protocol_Setting>
+  <RIP_Protocol_Version default="RIP v1" range="RIP v1/RIP v2">RIP v1</RIP_Protocol_Version>
+  <Neighbor_IP default="0.0.0.0">0.0.0.0</Neighbor_IP>
+  <Update_Time default="30" range="5-2147483647">30</Update_Time>
+  <Timeout default="180" range="5-2147483647">180</Timeout>
+  <Garbage default="120" range="5-2147483647">120</Garbage>
+  <Enable_Advance default="no" range="yes/no">no</Enable_Advance>
+  <Default_Metric default="1" range="1-16">1</Default_Metric>
+  <Distance default="120" range="1-255">120</Distance>
+  <Passive default="none" range="none/eth0/eth1/default">none</Passive>
+  <Enable_Default_origination default="no" range="yes/no">no</Enable_Default_origination>
+  <Enable_Redistribute_Connect default="no" range="yes/no">no</Enable_Redistribute_Connect>
+  <Enable_Redistribute_Static default="no" range="yes/no">no</Enable_Redistribute_Static>
+  <Enable_Redistribute_Ospf default="no" range="yes/no">no</Enable_Redistribute_Ospf>
+  <Enable_Advanced default="no" range="yes/no">no</Enable_Advanced>
+  <Network_List index_max="5" >
+     <Index1>
+       <Network_Address default="0.0.0.0">0.0.0.0</Network_Address>
+       <NetMask default="0.0.0.0">0.0.0.0</NetMask>
+     </Index1>
+  </Network_List>
+  <Enable_OSPFv2 default="no" range="yes/no">no</Enable_OSPFv2>
+  <Configuration_File default="" range="0-5119"></Configuration_File>
+ </Rip_Conf>
+ <Dyndns_Conf>
+  <Enable_DynDNS default="no" range="yes/no">no</Enable_DynDNS>
+  <Service_Type default="DDNS_DYNDNS_DYNAMIC" range="DDNS_DYNDNS_DYNAMIC/DDNS_3322/DDNS_NOIP/DDNS_CUSTOM">DDNS_DYNDNS_DYNAMIC</Service_Type>
+  <Hostname default="" range="1-64"></Hostname>
+  <Username default="" range="1-60"></Username>
+  <Password default="" range="1-60"></Password>
+  <Url default="" range="0-512"></Url>
+ </Dyndns_Conf>
+ <Ntp_Client_Conf>
+  <Enable_NTP_Client default="no" range="yes/no">yes</Enable_NTP_Client>
+  <Timezone default="GMT+08:00" range="GMT+/-time(which is selected on web.)">GMT+10:00</Timezone>
+  <Expert_setting default="" range="0-60"></Expert_setting>
+  <Primary_NTP_Server default="pool.ntp.org" range="0-64">0.pool.ntp.org</Primary_NTP_Server>
+  <Secondary_NTP_Server default="" range="0-64">1.pool.ntp.org</Secondary_NTP_Server>
+  <Update_Interval default="1" range="1-24">24</Update_Interval>
+ </Ntp_Client_Conf>
+ <Ntp_Server_Conf>
+  <Enable_NTP_Server default="no" range="yes/no">no</Enable_NTP_Server>
+  <Timezone default="GMT+08:00" range="GMT+/-time(which is selected on web.)">GMT+10:00</Timezone>
+ </Ntp_Server_Conf>
+ <Vrrp_Conf>
+  <Enable_VRRP default="no" range="yes/no">no</Enable_VRRP>
+  <Group_ID default="1" range="1-255">1</Group_ID>
+  <Priority default="100" range="1-255">100</Priority>
+  <Interval default="10" range="1-1800">10</Interval>
+  <Virtual_IP default="192.168.0.1">192.168.0.1</Virtual_IP>
+ </Vrrp_Conf>
+ <IPsec_Conf>
+  <Enable_NAT_Traversal default="yes" range="yes/no">no</Enable_NAT_Traversal>
+  <Keepalive_Interval default="30" range="0-1800">30</Keepalive_Interval>
+  <Enable_Debug default="no" range="yes/no">no</Enable_Debug>
+  <IPsec_Tunnel_List index_max="6" >
+     <Index1>
+       <Enable default="no" range="yes/no">no</Enable>
+       <IPsec_Tunnel_Name default="" range="0-20">IPsec_Tunnel_1</IPsec_Tunnel_Name>
+       <IPsec_Tunnel_Alias_Name default="" range="0-20"></IPsec_Tunnel_Alias_Name>
+       <IPsec_Gateway_Address default="" range="0-64"></IPsec_Gateway_Address>
+       <IPsec_Mode default="TUNNEL_MODE" range="TUNNEL_MODE/TRANSPORT_MODE">TUNNEL_MODE</IPsec_Mode>
+       <IPsec_Protocol default="ESP_ENCAP" range="ESP_ENCAP/AH_ENCAP">ESP_ENCAP</IPsec_Protocol>
+       <Local_Subnet default="" range="0-16"></Local_Subnet>
+       <Local_Subnet_Mask default="0.0.0.0">0.0.0.0</Local_Subnet_Mask>
+       <Local_ID_Type default="ID_DEFAULT" range="ID_DEFAULT/ID_MYID/ID_FQDN/ID_USER_FQDN">ID_DEFAULT</Local_ID_Type>
+       <Local_ID default="" range="0-64"></Local_ID>
+       <Remote_Subnet default="" range="0-16"></Remote_Subnet>
+       <Remote_Subnet_Mask default="0.0.0.0">0.0.0.0</Remote_Subnet_Mask>
+       <Remote_ID_Type default="ID_DEFAULT" range="ID_DEFAULT/ID_MYID/ID_FQDN/ID_USER_FQDN">ID_DEFAULT</Remote_ID_Type>
+       <Remote_ID default="" range="0-64"></Remote_ID>
+       <Negotiation_Mode default="MAIN_MODE" range="MAIN_MODE/AGGRESSIVE_MODE">MAIN_MODE</Negotiation_Mode>
+       <Encryption_Algorithm default="IPSEC_3DES_ENCRYPT" range="IPSEC_NULL_ENCRYPT/IPSEC_DES_ENCRYPT/IPSEC_3DES_ENCRYPT/IPSEC_AES128_ENCRYPT/IPSEC_AES192_ENCRYPT/IPSEC_AES256_ENCRYPT">IPSEC_3DES_ENCRYPT</Encryption_Algorithm>
+       <Authentication_Algorithm default="MD5_AUTH" range="NULL_AUTH/MD5_AUTH/SHA1_AUTH">MD5_AUTH</Authentication_Algorithm>
+       <DH_Group default="GROUP_2_MODP1024" range="GROUP_NULL/GROUP_1_MODP768/GROUP_2_MODP1024/GROUP_5_MODP1536">GROUP_2_MODP1024</DH_Group>
+       <Authentication default="IPSEC_AUTH_PSK" range="IPSEC_AUTH_NULL/IPSEC_AUTH_PSK/IPSEC_AUTH_CA/IPSEC_XAUTH_INIT_PSK/IPSEC_XAUTH_INIT_CA">IPSEC_AUTH_PSK</Authentication>
+       <Username default="" range="0-50"></Username>
+       <Password default="" range="0-50"></Password>
+       <Enable_Modem_Cfg default="no" range="yes/no">no</Enable_Modem_Cfg>
+       <Secrets default="" range="0-128"></Secrets>
+       <IKE_Life_Time default="86400" range="60-86400">86400</IKE_Life_Time>
+       <SA_Algorithm default="IPSEC_3DES_MD5_96" range="IPSEC_DES_MD5_96/IPSEC_DES_SHA1_96/IPSEC_3DES_MD5_96/IPSEC_3DES_SHA1_96/IPSEC_AES128_MD5_96/IPSEC_AES128_SHA1_96/IPSEC_AES192_MD5_96/IPSEC_AES192_SHA1_96/IPSEC_AES256_MD5_96/IPSEC_AES256_SHA1_96/IPSEC_AH_MD5_96/IPSEC_AH_SHA1_96">IPSEC_3DES_MD5_96</SA_Algorithm>
+       <PFS_Group default="GROUP_NULL" range="GROUP_NULL/GROUP_1_MODP768/GROUP_2_MODP1024/GROUP_5_MODP1536">GROUP_NULL</PFS_Group>
+       <SA_Life_Time default="3600" range="60-86400">3600</SA_Life_Time>
+       <DPD_Time_Interval default="60" range="3-3600">60</DPD_Time_Interval>
+       <DPD_Timeout default="180" range="1-3600">180</DPD_Timeout>
+       <Enable_Compress default="no" range="yes/no">no</Enable_Compress>
+       <Enable_ICMP_Detection default="no" range="yes/no">no</Enable_ICMP_Detection>
+       <ICMP_Detection_Server default="" range="0-64"></ICMP_Detection_Server>
+       <ICMP_Detection_Local_IP default="" range="0-15"></ICMP_Detection_Local_IP>
+       <ICMP_Detection_Interval default="30" range="3-1800">30</ICMP_Detection_Interval>
+       <ICMP_Detection_Timeout default="5" range="1-10">5</ICMP_Detection_Timeout>
+       <ICMP_Detection_Retries default="3" range="1-20">3</ICMP_Detection_Retries>
+       <VPN_Over_IPsec_Type default="NULL" range="NULL/L2TP/GRE">NULL</VPN_Over_IPsec_Type>
+       <Tunnel_Name default="" range="0-21"></Tunnel_Name>
+     </Index1>
+  </IPsec_Tunnel_List>
+ </IPsec_Conf>
+ <OpenVPN_Conf>
+  <Mode default="none" range="none/server/client">none</Mode>
+ </OpenVPN_Conf>
+ <OvpnVPN_Server_Conf>
+  <OpenVPN_Server_List index_max="1" >
+     <Index1>
+       <Enable_OpenVPN_Server default="no" range="yes/no">no</Enable_OpenVPN_Server>
+       <Listen_IP default="0.0.0.0">0.0.0.0</Listen_IP>
+       <Protocol default="udp" range="udp/tcp-server">udp</Protocol>
+       <Port default="1194" range="1-65535">1194</Port>
+       <Interface default="tun" range="tun/tap">tun</Interface>
+       <Authentication default="none" range="none/pre-shared/(username/passwd)/X.509 cert multi-client/X.509 cert+user">none</Authentication>
+       <Local_IP default="10.8.0.1">10.8.0.1</Local_IP>
+       <Remote_IP_Or_Mask default="10.8.0.2">10.8.0.2</Remote_IP_Or_Mask>
+       <Client_Subnet default="10.8.0.0">10.8.0.0</Client_Subnet>
+       <Client_Subnet_Mask default="255.255.255.0">255.255.255.0</Client_Subnet_Mask>
+       <Renegotiation_Interval default="86400" range="0-86400">86400</Renegotiation_Interval>
+       <Max_Clients default="10" range="0-100">10</Max_Clients>
+       <Enable_Default_Gateway default="no" range="yes/no">no</Enable_Default_Gateway>
+       <Enable_NAT default="no" range="yes/no">no</Enable_NAT>
+       <Ping_Interval default="20" range="3-3600">20</Ping_Interval>
+       <Ping_Restart default="120" range="3-3600">120</Ping_Restart>
+       <Compression default="LZO" range="none/LZO">LZO</Compression>
+       <Encryption default="NONE" range="NONE/BF/DES/DES3/AES-128/AES-192/AES-256">NONE</Encryption>
+       <MTU default="1500" range="64-1500">1500</MTU>
+       <Max_Frame_Size default="1500" range="1024-1500">1500</Max_Frame_Size>
+       <Verbose_Level default="ERR" range="ERR/WARNING/NOTICE/DEBUG">ERR</Verbose_Level>
+       <Expert_Options default="" range="0-128"></Expert_Options>
+       <Enable_HMAC_Firewall default="no" range="yes/no">no</Enable_HMAC_Firewall>
+       <Enable_Crl default="no" range="yes/no">no</Enable_Crl>
+       <Enable_Client_To_Client default="no" range="yes/no">no</Enable_Client_To_Client>
+       <Enable_Dup_Client default="no" range="yes/no">no</Enable_Dup_Client>
+       <Enable_IP_Persist default="yes" range="yes/no">yes</Enable_IP_Persist>
+       <Enable_IP_Pool default="no" range="yes/no">no</Enable_IP_Pool>
+       <IP_Pool_Start default="10.8.0.5">10.8.0.5</IP_Pool_Start>
+       <IP_Pool_End default="10.8.0.254">10.8.0.254</IP_Pool_End>
+       <Client_Manage_List index_max="20" >
+          <Index1>
+            <Use default="no" range="yes/no">no</Use>
+            <Common_Name default="" range="0-63"></Common_Name>
+            <Password default="" range="0-63"></Password>
+            <Client_IP default="0.0.0.0">0.0.0.0</Client_IP>
+            <Local_Static_Route index_max="5" >
+               <Index1>
+                 <Local_Subnet default="0.0.0.0">0.0.0.0</Local_Subnet>
+                 <Local_Subnet_Mask default="0.0.0.0">0.0.0.0</Local_Subnet_Mask>
+               </Index1>
+            </Local_Static_Route>
+            <Remote_Static_Route index_max="5" >
+               <Index1>
+                 <Remote_Subnet default="0.0.0.0">0.0.0.0</Remote_Subnet>
+                 <Remote_Subnet_Mask default="0.0.0.0">0.0.0.0</Remote_Subnet_Mask>
+               </Index1>
+            </Remote_Static_Route>
+          </Index1>
+       </Client_Manage_List>
+     </Index1>
+  </OpenVPN_Server_List>
+ </OvpnVPN_Server_Conf>
+ <OvpnCltConf>
+  <OpenVPN_Client_List index_max="3" >
+     <Index1>
+       <Enable_OpenVPN_Client default="no" range="yes/no">no</Enable_OpenVPN_Client>
+       <Protocol default="udp" range="udp/tcp-client">udp</Protocol>
+       <Remote_IP_Address default="" range="0-63"></Remote_IP_Address>
+       <Port default="1194" range="1-65535">1194</Port>
+       <Interface default="tun" range="tun/tap">tun</Interface>
+       <Authentication default="none" range="none/pre-shared/(username/passwd)/X.509 cert/X.509 cert+user">none</Authentication>
+       <Local_IP default="10.8.0.2">10.8.0.2</Local_IP>
+       <Remote_IP_Or_Mask default="10.8.0.1">10.8.0.1</Remote_IP_Or_Mask>
+       <Username default="" range="0-63"></Username>
+       <Password default="" range="0-63"></Password>
+       <Enable_Pkcs12 default="no" range="yes/no">no</Enable_Pkcs12>
+       <Private_Key_Password default="" range="0-63"></Private_Key_Password>
+       <Cert_Key_Password default="" range="0-63"></Cert_Key_Password>
+       <Enable_HMAC_Firewall default="no" range="yes/no">no</Enable_HMAC_Firewall>
+       <Enable_NsCertType default="no" range="yes/no">no</Enable_NsCertType>
+       <Enable_NAT default="no" range="yes/no">no</Enable_NAT>
+       <Ping_Interval default="20" range="3-3600">20</Ping_Interval>
+       <Ping_Restart default="120" range="3-3600">120</Ping_Restart>
+       <Compression default="LZO" range="none/LZO">LZO</Compression>
+       <Encryption default="BF" range="NONE/BF/DES/DES3/AES-128/AES-192/AES-256">NONE</Encryption>
+       <MTU default="1500" range="64-1500">1500</MTU>
+       <Max_Frame_Size default="1500" range="1024-1500">1500</Max_Frame_Size>
+       <Verbose_Level default="ERR" range="ERR/WARNING/NOTICE/DEBUG">ERR</Verbose_Level>
+       <Expert_Options default="" range="0-128"></Expert_Options>
+       <Local_Static_Route index_max="5" >
+          <Index1>
+            <Local_Subnet default="0.0.0.0">0.0.0.0</Local_Subnet>
+            <Local_Subnet_Mask default="0.0.0.0">0.0.0.0</Local_Subnet_Mask>
+          </Index1>
+       </Local_Static_Route>
+     </Index1>
+  </OpenVPN_Client_List>
+ </OvpnCltConf>
+ <Gre_Conf>
+  <Gre_Configuration_List index_max="3" >
+     <Index1>
+       <Enable default="no" range="yes/no">no</Enable>
+       <Remote_IP_Address default="" range="0-64"></Remote_IP_Address>
+       <Local_Virtual_IP default="0.0.0.0">0.0.0.0</Local_Virtual_IP>
+       <Local_Virtual_NetMask default="0.0.0.0">0.0.0.0</Local_Virtual_NetMask>
+       <Remote_Virtual_IP default="0.0.0.0">0.0.0.0</Remote_Virtual_IP>
+       <Remote_Subnet_List index_max="10" >
+          <Index1>
+            <Remote_Subnet default="">0.0.0.0</Remote_Subnet>
+            <Remote_Subnet_Mask default="">0.0.0.0</Remote_Subnet_Mask>
+          </Index1>
+       </Remote_Subnet_List>
+       <All_Traffic_Via_This_Interface default="no" range="yes/no">no</All_Traffic_Via_This_Interface>
+       <Enable_NAT default="no" range="yes/no">no</Enable_NAT>
+       <Secrets default="" range="0-128"></Secrets>
+     </Index1>
+  </Gre_Configuration_List>
+ </Gre_Conf>
+ <Pptp_Client_Conf>
+  <PPTP_Client_List index_max="3" >
+     <Index1>
+       <Enable default="no" range="yes/no">no</Enable>
+       <Remote_IP_Address default="" range="0-64"></Remote_IP_Address>
+       <Username default="" range="0-50"></Username>
+       <Password default="" range="0-50"></Password>
+       <Authentication default="DIALUP_AUTH_AUTO" range="DIALUP_AUTH_AUTO/DIALUP_AUTH_PAP/DIALUP_AUTH_CHAP">DIALUP_AUTH_AUTO</Authentication>
+       <Remote_Subnet default="0.0.0.0">0.0.0.0</Remote_Subnet>
+       <Remote_Subnet_Mask default="0.0.0.0">0.0.0.0</Remote_Subnet_Mask>
+       <Enable_NAT default="no" range="yes/no">no</Enable_NAT>
+       <Enable_MPPE default="no" range="yes/no">no</Enable_MPPE>
+       <All_Traffic_Via_This_Interface default="no" range="yes/no">no</All_Traffic_Via_This_Interface>
+       <Local_IP default="0.0.0.0">0.0.0.0</Local_IP>
+       <Remote_IP default="0.0.0.0">0.0.0.0</Remote_IP>
+       <Show_Advanced default="no" range="yes/no">no</Show_Advanced>
+       <AddressOrControl_Compression default="yes" range="yes/no">no</AddressOrControl_Compression>
+       <Protocol_Field_Compression default="yes" range="yes/no">no</Protocol_Field_Compression>
+       <Asyncmap_Value default="ffffffff" range="0-8">ffffffff</Asyncmap_Value>
+       <MRU default="1500" range="64-1500">1500</MRU>
+       <MTU default="1436" range="64-1500">1436</MTU>
+       <Link_Detection_Interval default="60" range="3-60">30</Link_Detection_Interval>
+       <Link_Detection_Max_Retries default="5" range="3-5">5</Link_Detection_Max_Retries>
+       <Expert_Options default="noccp nobsdcomp" range="0-50">nodeflate nobsdcomp novj novjccomp noccp</Expert_Options>
+     </Index1>
+  </PPTP_Client_List>
+ </Pptp_Client_Conf>
+ <Pptp_Server_Conf>
+  <Enable_PPTP_Server default="no" range="yes/no">no</Enable_PPTP_Server>
+  <Username default="" range="0-50"></Username>
+  <Password default="" range="0-50"></Password>
+  <Authentication default="DIALUP_AUTH_CHAP" range="DIALUP_AUTH_AUTO/DIALUP_AUTH_PAP/DIALUP_AUTH_CHAP">DIALUP_AUTH_CHAP</Authentication>
+  <Local_IP default="10.0.0.1">10.0.0.1</Local_IP>
+  <IP_Pool_Start default="10.0.0.2">10.0.0.2</IP_Pool_Start>
+  <IP_Pool_End default="10.0.0.100">10.0.0.100</IP_Pool_End>
+  <Enable_MPPE default="no" range="yes/no">no</Enable_MPPE>
+  <Show_Advanced default="no" range="yes/no">no</Show_Advanced>
+  <AddressOrControl_Compression default="yes" range="yes/no">no</AddressOrControl_Compression>
+  <Protocol_Field_Compression default="yes" range="yes/no">no</Protocol_Field_Compression>
+  <Asyncmap_Value default="ffffffff" range="0-8">ffffffff</Asyncmap_Value>
+  <MRU default="1500" range="64-1500">1500</MRU>
+  <MTU default="1436" range="64-1500">1436</MTU>
+  <Link_Detection_Interval default="60" range="3-60">30</Link_Detection_Interval>
+  <Link_Detection_Max_Retries default="5" range="3-5">5</Link_Detection_Max_Retries>
+  <Expert_Options default="noccp nobsdcomp" range="0-50">nodeflate nobsdcomp novj novjccomp noccp</Expert_Options>
+  <Pptp_Route_Table_List index_max="20" >
+     <Index1>
+       <Client_IP default="0.0.0.0">0.0.0.0</Client_IP>
+       <Remote_Subnet default="0.0.0.0">0.0.0.0</Remote_Subnet>
+       <Remote_Subnet_Mask default="0.0.0.0">0.0.0.0</Remote_Subnet_Mask>
+     </Index1>
+  </Pptp_Route_Table_List>
+ </Pptp_Server_Conf>
+ <L2tp_Client_Conf>
+  <L2TP_Client_List index_max="3" >
+     <Index1>
+       <Enable default="no" range="yes/no">no</Enable>
+       <Remote_IP_Address default="" range="0-64"></Remote_IP_Address>
+       <Username default="" range="0-50"></Username>
+       <Password default="" range="0-50"></Password>
+       <Authentication default="DIALUP_AUTH_AUTO" range="DIALUP_AUTH_AUTO/DIALUP_AUTH_PAP/DIALUP_AUTH_CHAP">DIALUP_AUTH_AUTO</Authentication>
+       <Enable_NAT default="no" range="yes/no">no</Enable_NAT>
+       <All_Traffic_Via_This_Interface default="no" range="yes/no">no</All_Traffic_Via_This_Interface>
+       <Enable_Tunnel_Authentication default="no" range="yes/no">no</Enable_Tunnel_Authentication>
+       <Tunnel_Secret default="" range="0-128"></Tunnel_Secret>
+       <Remote_Subnet default="0.0.0.0">0.0.0.0</Remote_Subnet>
+       <Remote_Subnet_Mask default="0.0.0.0">0.0.0.0</Remote_Subnet_Mask>
+       <Show_Advanced default="no" range="yes/no">no</Show_Advanced>
+       <Port default="1701" range="1-65535">1701</Port>
+       <Local_IP default="0.0.0.0">0.0.0.0</Local_IP>
+       <Remote_IP default="0.0.0.0">0.0.0.0</Remote_IP>
+       <AddressOrControl_Compression default="yes" range="yes/no">no</AddressOrControl_Compression>
+       <Protocol_Field_Compression default="yes" range="yes/no">no</Protocol_Field_Compression>
+       <Asyncmap_Value default="ffffffff" range="0-8">ffffffff</Asyncmap_Value>
+       <MRU default="1500" range="64-1500">1500</MRU>
+       <MTU default="1436" range="64-1500">1436</MTU>
+       <Link_Detection_Interval default="60" range="3-60">30</Link_Detection_Interval>
+       <Link_Detection_Max_Retries default="5" range="3-5">5</Link_Detection_Max_Retries>
+       <Expert_Options default="noccp nobsdcomp" range="0-50">nodeflate nobsdcomp novj novjccomp noccp</Expert_Options>
+     </Index1>
+  </L2TP_Client_List>
+ </L2tp_Client_Conf>
+ <L2tp_Server_Conf>
+  <Enable_L2TP_Server default="no" range="yes/no">no</Enable_L2TP_Server>
+  <Username default="" range="0-50"></Username>
+  <Password default="" range="0-50"></Password>
+  <Authentication default="DIALUP_AUTH_CHAP" range="DIALUP_AUTH_AUTO/DIALUP_AUTH_PAP/DIALUP_AUTH_CHAP">DIALUP_AUTH_CHAP</Authentication>
+  <Enable_Tunnel_Authentication default="no" range="yes/no">no</Enable_Tunnel_Authentication>
+  <Tunnel_Secret default="" range="0-128"></Tunnel_Secret>
+  <Local_IP default="10.0.0.1">10.0.0.1</Local_IP>
+  <IP_Pool_Start default="10.0.0.2">10.0.0.2</IP_Pool_Start>
+  <IP_Pool_End default="10.0.0.100">10.0.0.100</IP_Pool_End>
+  <Show_Advanced default="no" range="yes/no">no</Show_Advanced>
+  <AddressOrControl_Compression default="yes" range="yes/no">no</AddressOrControl_Compression>
+  <Protocol_Field_Compression default="yes" range="yes/no">no</Protocol_Field_Compression>
+  <Port default="1701" range="0-65535">1701</Port>
+  <Asyncmap_Value default="ffffffff" range="0-8">ffffffff</Asyncmap_Value>
+  <MRU default="1500" range="64-1500">1500</MRU>
+  <MTU default="1436" range="64-1500">1436</MTU>
+  <Link_Detection_Interval default="60" range="3-60">30</Link_Detection_Interval>
+  <Link_Detection_Max_Retries default="5" range="3-5">5</Link_Detection_Max_Retries>
+  <Expert_Options default="noccp nobsdcomp" range="0-50">nodeflate nobsdcomp novj novjccomp noccp</Expert_Options>
+  <L2tp_Route_Table_List index_max="20" >
+     <Index1>
+       <Client_IP default="0.0.0.0">0.0.0.0</Client_IP>
+       <Remote_Subnet default="0.0.0.0">0.0.0.0</Remote_Subnet>
+       <Remote_Subnet_Mask default="0.0.0.0">0.0.0.0</Remote_Subnet_Mask>
+     </Index1>
+  </L2tp_Route_Table_List>
+ </L2tp_Server_Conf>
+ <Snmp_Conf>
+  <Enable_SNMP default="no" range="yes/no">yes</Enable_SNMP>
+  <Port default="161" range="1-65535">161</Port>
+  <Agent_Mode default="Master" range="Master">Master</Agent_Mode>
+  <Version default="SNMPv2" range="SNMPv1/SNMPv2/SNMPv3">SNMPv2</Version>
+  <Location_Info default="China" range="0-79">AU7GEO1</Location_Info>
+  <Contact_Info default="info@xxxxx.com" range="0-79">info@thinxtra.com</Contact_Info>
+  <System_Name default="router" range="0-79">AU7GEO1</System_Name>
+  <Mib_View_List index_max="50" >
+     <Index1>
+       <View_Name default="" range="0-32">all</View_Name>
+       <View_Filter default="include" range="include/exclude">include</View_Filter>
+       <View_OID default="" range="0-64">1</View_OID>
+     </Index1>
+  </Mib_View_List>
+  <SNMPv1v2_User_List index_max="10" >
+     <Index1>
+       <MIBview default="" range="0-31">all</MIBview>
+       <Readwrite_Mode default="" range="readonly/readwrite">readwrite</Readwrite_Mode>
+       <Subnet default="0.0.0.0">0.0.0.0</Subnet>
+       <Subnet_Mask default="0.0.0.0">0.0.0.0</Subnet_Mask>
+       <Community default="" range="0-32">Th!nxtrA4</Community>
+     </Index1>
+  </SNMPv1v2_User_List>
+  <SNMPv3_User_List index_max="10" >
+     <Index1>
+       <Username default="" range="0-63"></Username>
+       <Readwrite default="readonly" range="readonly/readwrite"></Readwrite>
+       <Auth_Priv_Mode default="noauth+nopriv" range="noauth+nopriv/auth+nopriv/auth+priv">noauth+nopriv</Auth_Priv_Mode>
+       <Auth_Encryption default="MD5" range="0-7"></Auth_Encryption>
+       <Auth_Password default="" range="0-63"></Auth_Password>
+       <Priv_Encryption default="DES" range="0-7"></Priv_Encryption>
+       <Priv_Password default="" range="0-63"></Priv_Password>
+       <MIBview default="" range="0-31"></MIBview>
+     </Index1>
+  </SNMPv3_User_List>
+ </Snmp_Conf>
+ <Snmp_Trap_Conf>
+  <Enable_SNMP_Trap default="no" range="yes/no">yes</Enable_SNMP_Trap>
+  <Version default="SNMPv1" range="SNMPv1/SNMPv2/SNMPv3">SNMPv2</Version>
+  <Server_Address default="" range="0-64">nms.thinxtra.com</Server_Address>
+  <Port default="0" range="0-65535">162</Port>
+  <Name default="" range="0-63">RENAME_hostname</Name>
+  <AuthPrivMode default="noauth+nopriv" range="noauth+nopriv/auth+nopriv/auth+priv">noauth+nopriv</AuthPrivMode>
+  <Auth_Encryption default="MD5" range="0-7"></Auth_Encryption>
+  <Auth_Password default="" range="0-63"></Auth_Password>
+  <Priv_Encryption default="DES" range="0-7"></Priv_Encryption>
+  <Priv_Password default="" range="0-63"></Priv_Password>
+ </Snmp_Trap_Conf>
+ <At_Conf>
+  <Enable default="no" range="yes/no">no</Enable>
+  <Protocol default="UDP" range="TCP/UDP">UDP</Protocol>
+  <Local_IP default="0.0.0.0">0.0.0.0</Local_IP>
+  <Local_Port default="8091" range="0-65535">8091</Local_Port>
+ </At_Conf>
+ <Sms_Conf>
+  <SMS_Delete_All_SMS default="yes" range="yes/no">yes</SMS_Delete_All_SMS>
+  <Send_SMS_On_Power_Up default="no" range="yes/no">no</Send_SMS_On_Power_Up>
+  <Send_SMS_On_PPP_Connect default="no" range="yes/no">no</Send_SMS_On_PPP_Connect>
+  <Send_SMS_On_PPP_Disconnect default="no" range="yes/no">no</Send_SMS_On_PPP_Disconnect>
+  <Send_SMS_When_Datalimit_Is_Exceeded default="no" range="yes/no">no</Send_SMS_When_Datalimit_Is_Exceeded>
+  <Send_SMS_When_Datalimit_Exceeded_Percentage_of_Threshold default="no" range="yes/no">no</Send_SMS_When_Datalimit_Exceeded_Percentage_of_Threshold>
+  <The_Percentage_of_Threshold default="90" range="1-99">90</The_Percentage_of_Threshold>
+  <Phone_Group_Notification default="NULL" range="Name of the phonegroup">admin</Phone_Group_Notification>
+  <Enable default="no" range="yes/no">yes</Enable>
+  <Password_Content default="" range="0-128">thinxtra</Password_Content>
+  <Phone_Group_Control default="NULL" range="Name of the phonegroup">admin</Phone_Group_Control>
+ </Sms_Conf>
+ <Reboot_Time_Conf>
+  <Enable_Time_Reboot default="no" range="yes/no">no</Enable_Time_Reboot>
+  <Hour_1 default="12" range="0-23">12</Hour_1>
+  <Minute_1 default="0" range="0-59">0</Minute_1>
+  <Hour_2 default="0" range="0-23">0</Hour_2>
+  <Minute_2 default="0" range="0-59">0</Minute_2>
+  <Hour_3 default="0" range="0-23">0</Hour_3>
+  <Minute_3 default="0" range="0-59">0</Minute_3>
+ </Reboot_Time_Conf>
+ <Reboot_Call_Conf>
+  <Enable_Call_Reboot default="no" range="yes/no">no</Enable_Call_Reboot>
+  <Phone_Group default="NULL" range="Name of the phonegroup">NULL</Phone_Group>
+  <SMS_Reply_Content default="" range="0-128"></SMS_Reply_Content>
+ </Reboot_Call_Conf>
+ <Reboot_Sms_Conf>
+  <Enable_SMS_Reboot default="no" range="yes/no">yes</Enable_SMS_Reboot>
+  <Phone_Group default="NULL" range="Name of the phonegroup">admin</Phone_Group>
+  <Password default="" range="0-128">thinxtra</Password>
+  <SMS_Reply_Content default="" range="0-128"></SMS_Reply_Content>
+ </Reboot_Sms_Conf>
+ <Portal_Conf>
+  <Enable_Portal default="no" range="yes/no">yes</Enable_Portal>
+  <Server_Type default="PORTAL_ROBUSTEL" range="PORTAL_ROBUSTEL/PORTAL_TINGCO/PORTAL_CUMULOCITY/PORTAL_GPSGATE">PORTAL_ROBUSTEL</Server_Type>
+  <Server_Address default="" range="1-64">rms.thinxtra.com</Server_Address>
+  <Port default="1883" range="1-65535">31000</Port>
+  <UnitID default="" range="0-64"></UnitID>
+  <CLID default="" range="0-64">Thinxtra1238</CLID>
+  <Device_Name default="R3000" range="0-64"></Device_Name>
+  <Device_Id default="85500" range="0-20"></Device_Id>
+  <KeepAlive default="120" range="5-600">60</KeepAlive>
+ </Portal_Conf>
+ <SysLog_Conf>
+  <Save_Position default="POSITION_NULL" range="POSITION_NULL/POSITION_FLASH/POSITION_SD">POSITION_NULL</Save_Position>
+  <Log_Level default="SYSLOG_DEBUG" range="SYSLOG_DEBUG/SYSLOG_INFO/SYSLOG_NOTICE/SYSLOG_WARNING/SYSLOG_ERR/SYSLOG_CRIT/SYSLOG_ALERT/SYSLOG_EMERG">SYSLOG_INFO</Log_Level>
+  <Keep_Days default="14" range="1-14">14</Keep_Days>
+  <Syslog_Remote_list index_max="5" >
+     <Index1>
+       <Remote_isUse default="no" range="yes/no">no</Remote_isUse>
+       <Remote_IP default="" range="0-64"></Remote_IP>
+       <Remote_UDP_Port default="514" range="1-65535">0</Remote_UDP_Port>
+     </Index1>
+  </Syslog_Remote_list>
+ </SysLog_Conf>
+ <Dhcp_Relay_Conf>
+  <Enable_DHCP_Relay default="no" range="yes/no">no</Enable_DHCP_Relay>
+  <DHCP_Server1 default="0.0.0.0">0.0.0.0</DHCP_Server1>
+  <DHCP_Server2 default="0.0.0.0">0.0.0.0</DHCP_Server2>
+ </Dhcp_Relay_Conf>
+ <Gps_Conf>
+  <Enable_GPS default="no" range="yes/no">no</Enable_GPS>
+  <Sync_Time_From_GPS default="no" range="yes/no">no</Sync_Time_From_GPS>
+  <Report_To_RS232 default="DTU_TRANSPARENT" range="DTU_TRANSPARENT/DTU_GPS_REPORT">DTU_TRANSPARENT</Report_To_RS232>
+  <RS232_Report_Type default="GGA+VTG" range="GGA+VTG/GGA+VTG+RMC/RMC">GGA+VTG</RS232_Report_Type>
+  <RS232_Report_Interval default="1" range="1-600">1</RS232_Report_Interval>
+  <GNNS_Type default="GPS" range="GPS">GPS</GNNS_Type>
+  <Gps_Server_List index_max="3" >
+     <Index1>
+       <Enable default="no" range="yes/no">no</Enable>
+       <Report_Type default="GGA+VTG" range="GGA+VTG/GGA+VTG+RMC/RMC">GGA+VTG</Report_Type>
+       <Report_Interval default="5" range="1-600">5</Report_Interval>
+       <Protocol_Type default="TCP" range="TCP/UDP">TCP</Protocol_Type>
+       <Protocol_Mode default="PROTOCOL_SERVER" range="PROTOCOL_SERVER/PROTOCOL_CLIENT">PROTOCOL_SERVER</Protocol_Mode>
+       <Local_Port default="0" range="0-65535">0</Local_Port>
+       <Server_Address default="" range="0-64"></Server_Address>
+       <Server_Port default="0" range="0-65535">0</Server_Port>
+     </Index1>
+  </Gps_Server_List>
+ </Gps_Conf>
+ <WebServerConf>
+  <HTTP_Port default="80" range="1-65535">80</HTTP_Port>
+  <HTTPS_Port default="443" range="1-65535">443</HTTPS_Port>
+ </WebServerConf>
+ <QoS_Conf>
+  <Enable_QoS default="no" range="yes/no">no</Enable_QoS>
+  <Downlink_Speed default="0" range="0-2147483647">0</Downlink_Speed>
+  <Uplink_Speed default="0" range="0-2147483647">0</Uplink_Speed>
+  <Optimize_For_TCP_SYN default="no" range="yes/no">no</Optimize_For_TCP_SYN>
+  <Optimize_For_TCP_ACK default="no" range="yes/no">no</Optimize_For_TCP_ACK>
+  <Optimize_For_TCP_FIN default="no" range="yes/no">no</Optimize_For_TCP_FIN>
+  <Optimize_For_TCP_RST default="no" range="yes/no">no</Optimize_For_TCP_RST>
+  <Optimize_For_Serial_Data_Forwarding default="no" range="yes/no">no</Optimize_For_Serial_Data_Forwarding>
+  <Optimize_For_ICMP default="no" range="yes/no">no</Optimize_For_ICMP>
+  <Priority_Percent_Exempt default="50" range="1-100">50</Priority_Percent_Exempt>
+  <Priority_Percent_Premium default="25" range="1-100">25</Priority_Percent_Premium>
+  <Priority_Percent_Express default="15" range="1-100">15</Priority_Percent_Express>
+  <Priority_Percent_Normal default="10" range="1-100">10</Priority_Percent_Normal>
+  <Priority_Percent_Bulk default="1" range="1-100">1</Priority_Percent_Bulk>
+  <Default_Priority default="Normal" range="Exempt/Premium/Express/Normal/Bulk">Normal</Default_Priority>
+  <Enable_Port_Based_Priority default="no" range="yes/no">no</Enable_Port_Based_Priority>
+  <Port0_Priority default="Exempt" range="Exempt/Premium/Express/Normal/Bulk">Exempt</Port0_Priority>
+  <Port1_Priority default="Exempt" range="Exempt/Premium/Express/Normal/Bulk">Exempt</Port1_Priority>
+  <QoS_MAC_Control_List index_max="20" >
+     <Index1>
+       <MAC_Address default="" range="0-17"></MAC_Address>
+       <Priority default="Exempt" range="Exempt/Premium/Express/Normal/Bulk">Exempt</Priority>
+     </Index1>
+  </QoS_MAC_Control_List>
+  <QoS_IP_Control_List index_max="20" >
+     <Index1>
+       <IP_Address default="" range="0-31"></IP_Address>
+       <Priority default="Exempt" range="Exempt/Premium/Express/Normal/Bulk">Exempt</Priority>
+     </Index1>
+  </QoS_IP_Control_List>
+  <QoS_Service_Control_List index_max="20" >
+     <Index1>
+       <Service_Name default="" range="0-16"></Service_Name>
+       <Protocol default="TCP" range="TCP/UDP/TCP_AND_UDP">TCP</Protocol>
+       <Port default="0" range="0-65535">0</Port>
+       <Priority default="Exempt" range="Exempt/Premium/Express/Normal/Bulk">Exempt</Priority>
+     </Index1>
+  </QoS_Service_Control_List>
+ </QoS_Conf>
+ <Event_Conf>
+  <Enable default="no" range="yes/no">yes</Enable>
+ <BOOT_UP>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </BOOT_UP>
+ <CODE_3G_UP>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </CODE_3G_UP>
+ <CODE_3G_DOWN>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </CODE_3G_DOWN>
+ <GPRS_UP>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </GPRS_UP>
+ <GPRS_DOWN>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </GPRS_DOWN>
+ <OVPN1_UP>
+  <Snmp_Trap default="no" range="yes/no">no</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OVPN1_UP>
+ <OVPN2_UP>
+  <Snmp_Trap default="no" range="yes/no">no</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OVPN2_UP>
+ <OVPN3_UP>
+  <Snmp_Trap default="no" range="yes/no">no</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OVPN3_UP>
+ <OVPN1_DOWM>
+  <Snmp_Trap default="no" range="yes/no">no</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OVPN1_DOWM>
+ <OVPN2_DOWM>
+  <Snmp_Trap default="no" range="yes/no">no</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OVPN2_DOWM>
+ <OVPN3_DOWM>
+  <Snmp_Trap default="no" range="yes/no">no</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OVPN3_DOWM>
+ <INT1_UP>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </INT1_UP>
+ <INT2_UP>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </INT2_UP>
+ <INT1_DOWM>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </INT1_DOWM>
+ <INT2_DOWM>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </INT2_DOWM>
+ <SMS_IN>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </SMS_IN>
+ <SMS_OUT>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </SMS_OUT>
+ <CONFIG_CHANGE>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </CONFIG_CHANGE>
+ <PORT1_UP>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </PORT1_UP>
+ <PORT1_DOWM>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </PORT1_DOWM>
+ <PORT2_UP>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </PORT2_UP>
+ <PORT2_DOWM>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </PORT2_DOWM>
+ <ACCESS_GRANTED>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </ACCESS_GRANTED>
+ <ACCESS_DENIED>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </ACCESS_DENIED>
+ <IN1_OPEN>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </IN1_OPEN>
+ <IN1_CLOSE>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </IN1_CLOSE>
+ <IN2_OPEN>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </IN2_OPEN>
+ <IN2_CLOSE>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </IN2_CLOSE>
+ <OUT1_OPEN>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OUT1_OPEN>
+ <OUT1_CLOSE>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OUT1_CLOSE>
+ <OUT2_OPEN>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OUT2_OPEN>
+ <OUT2_CLOSE>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </OUT2_CLOSE>
+ <STATS>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </STATS>
+ <AREA_CHANGE>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </AREA_CHANGE>
+ <SIM1_ACTIVE>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </SIM1_ACTIVE>
+ <SIM2_ACTIVE>
+  <Snmp_Trap default="no" range="yes/no">yes</Snmp_Trap>
+  <RLink default="no" range="yes/no">no</RLink>
+ </SIM2_ACTIVE>
+ </Event_Conf>
+ <USR_LED_Conf>
+  <USR_LED_Type default="VPN" range="VPN/PPPoE/DynDNS/GPS">VPN</USR_LED_Type>
+  <Indication default="ON" range="ON/Blink">ON</Indication>
+ </USR_LED_Conf>
+ <VLAN_Conf>
+  <Enable_Eth0_VLAN default="no" range="yes/no">no</Enable_Eth0_VLAN>
+  <Eth0_Vlan_List index_max="8" >
+     <Index1>
+       <ETH0_Isuse default="no" range="yes/no">no</ETH0_Isuse>
+       <ETH0_IP_Address default="0.0.0.0">0.0.0.0</ETH0_IP_Address>
+       <ETH0_Netmask default="0.0.0.0">0.0.0.0</ETH0_Netmask>
+       <ETH0_VLAN_ID default="" range="1-4094">0</ETH0_VLAN_ID>
+     </Index1>
+  </Eth0_Vlan_List>
+  <Enable_Eth1_VLAN default="no" range="yes/no">no</Enable_Eth1_VLAN>
+  <Eth1_Vlan_List index_max="8" >
+     <Index1>
+       <ETH1_Isuse default="no" range="yes/no">no</ETH1_Isuse>
+       <ETH1_IP_Address default="0.0.0.0">0.0.0.0</ETH1_IP_Address>
+       <ETH1_Netmask default="0.0.0.0">0.0.0.0</ETH1_Netmask>
+       <ETH1_VLAN_ID default="" range="1-4094">0</ETH1_VLAN_ID>
+     </Index1>
+  </Eth1_Vlan_List>
+ </VLAN_Conf>
+ <Pppoe_Bridge>
+  <Enable default="yes" range="yes/no">no</Enable>
+ </Pppoe_Bridge>
+ <RobusVPN_Conf>
+  <isUse default="no" range="yes/no">yes</isUse>
+  <Server default="" range="1-512">vpnserver.thinxtra.com</Server>
+  <Https_Port default="443" range="1-65535">443</Https_Port>
+  <Usname default="" range="0-64">tempvpnuser</Usname>
+  <PassWd default="" range="5-64">thinxtraiotsigfox</PassWd>
+ </RobusVPN_Conf>
+ <Virtual_ip_mapping_Conf>
+  <IP_For_Router default="yes">0.0.0.0</IP_For_Router>
+  <IP_Mapping_List index_max="50" >
+     <Index1>
+       <isUse default="no" range="yes/no">no</isUse>
+       <Description default="" range="0-20"></Description>
+       <Virtual_IP default="">0.0.0.0</Virtual_IP>
+       <Real_IP default="">0.0.0.0</Real_IP>
+     </Index1>
+  </IP_Mapping_List>
+ </Virtual_ip_mapping_Conf>
+ <Alarms_Conf>
+  <Alarms_List index_max="64" >
+     <Index1>
+       <Alarms_Enable default="no" range="yes/no">no</Alarms_Enable>
+       <Alarms_Src_Type default="Channel" range="Channel/Di/Signel/Gps">Channel</Alarms_Src_Type>
+       <Alarms_Src_Index default="1" range="1-64">1</Alarms_Src_Index>
+       <Alarms_Condition_Type default="GREATER" range="GREATER/LESS/EQUAL/UNEQUAL">GREATER</Alarms_Condition_Type>
+       <Alarms_Setpoit default="0" range="-3000-3000">0</Alarms_Setpoit>
+       <Alarms_Target_Index default="" range="0-65535">0</Alarms_Target_Index>
+       <Alarms_Continue_Alarm default="no" range="yes/no">no</Alarms_Continue_Alarm>
+       <Alarms_Connent_On default="" range="1-128"></Alarms_Connent_On>
+       <Alarms_Connent_Off default="" range="0-128"></Alarms_Connent_Off>
+       <Alarms_Phone_Group default="" range="0-65535">0</Alarms_Phone_Group>
+       <Alarms_Server_List index_max="5" >
+          <Index1>
+            <Alarms_Server_isUsed default="no" range="yes/no">no</Alarms_Server_isUsed>
+            <Alarms_Server_Address default="0.0.0.0" range="0-64"></Alarms_Server_Address>
+            <Alarms_Server_Port default="0" range="0-65535">0</Alarms_Server_Port>
+          </Index1>
+       </Alarms_Server_List>
+     </Index1>
+  </Alarms_List>
+ </Alarms_Conf>
+ <SMTP_Conf>
+  <SMTP_Enable default="no" range="yes/no">no</SMTP_Enable>
+  <SMTP_Address default="" range="1-64"></SMTP_Address>
+  <SMTP_Port default="" range="1-65535">25</SMTP_Port>
+  <SMTP_TimeOut default="10" range="5-120">10</SMTP_TimeOut>
+  <SMTP_Retry default="3" range="1-5">3</SMTP_Retry>
+  <SMTP_Resend_Interval default="10" range="3-120">10</SMTP_Resend_Interval>
+  <SMTP_User default="" range="1-64"></SMTP_User>
+  <SMTP_Password default="" range="1-64"></SMTP_Password>
+  <SMTP_From_Addr default="" range="1-64"></SMTP_From_Addr>
+  <SMTP_Subject default="" range="1-64"></SMTP_Subject>
+  <SMTP_Addr_List index_max="10" >
+     <Index1>
+       <SMTP_isUsed default="" range="">no</SMTP_isUsed>
+       <SMTP_Addr default="" range="0-64"></SMTP_Addr>
+     </Index1>
+  </SMTP_Addr_List>
+ </SMTP_Conf>
+ <ModbusOverTCP_Conf>
+  <ModbusOverTCP_Enable default="no" range="yes/no">no</ModbusOverTCP_Enable>
+  <ModbusOverTCP_SlaveId default="255" range="0-255">255</ModbusOverTCP_SlaveId>
+  <ModbusOverTCP_Port default="502" range="0-65535">502</ModbusOverTCP_Port>
+ </ModbusOverTCP_Conf>
+ <Modbus_Master_Conf>
+  <Modbus_Master_Enable default="no" range="yes/no">no</Modbus_Master_Enable>
+  <Modbus_Master_Interval default="30" range="1-3600">30</Modbus_Master_Interval>
+  <Modbus_Master_Attempts default="3" range="1-5">3</Modbus_Master_Attempts>
+  <Modbus_Master_Max_Respond default="500" range="300-10000">500</Modbus_Master_Max_Respond>
+  <Modbus_Master_Cmd_Interval default="50" range="1-5000">50</Modbus_Master_Cmd_Interval>
+  <Modbus_Master_Logging_Type default="NULL" range="NULL/FLASH/SD/USB">NULL</Modbus_Master_Logging_Type>
+  <Modbus_Master_Via default="no" range="yss/no">no</Modbus_Master_Via>
+  <Modbus_Master_Remote_Channel_List index_max="64" >
+     <Index1>
+       <Remote_Channel_Isuse default="no" range="yes/no">no</Remote_Channel_Isuse>
+       <Remote_Channel_Index default="" range="1-65">1</Remote_Channel_Index>
+       <Remote_Channel_Tag default="" range="0-20"></Remote_Channel_Tag>
+       <Remote_Channel_SlaveId default="" range="1-247">1</Remote_Channel_SlaveId>
+       <Remote_Channel_Modbus_Cmd default="COILS" range="COILS/DISCRT/HOLD16/HOLD32/HOLDF/INPUT16/INPUT32/INPUTF">HOLD16</Remote_Channel_Modbus_Cmd>
+       <Remote_Channel_Modbus_ViaType default="RS485" range="RS485/RS232/TCP">RS485</Remote_Channel_Modbus_ViaType>
+       <Remote_Channel_Modbus_SlaveIP default="">0.0.0.0</Remote_Channel_Modbus_SlaveIP>
+       <Remote_Channel_Modbus_SlavePort default="502" range="0-65535">502</Remote_Channel_Modbus_SlavePort>
+       <Remote_Channel_Register default="0" range="0-65535">0</Remote_Channel_Register>
+       <Remote_Channel_Quadtity default="1" range="1-125">1</Remote_Channel_Quadtity>
+       <Remote_Channel_ErrValue default="-100" range="-32767-32767">-100</Remote_Channel_ErrValue>
+       <Remote_Channel_Replace default="0" range="0-4">0</Remote_Channel_Replace>
+       <Remote_Channel_Unsigned default="no" range="yes/no">no</Remote_Channel_Unsigned>
+     </Index1>
+  </Modbus_Master_Remote_Channel_List>
+  <Modbus_Master_Protocal_Type default="TCP" range="TCP/UDP/ICMP/TCP_AND_UDP/ALL">TCP</Modbus_Master_Protocal_Type>
+  <Modbus_Master_Local_IP default="">0.0.0.0</Modbus_Master_Local_IP>
+  <Modbus_Master_Local_Port default="" range="0-65535">0</Modbus_Master_Local_Port>
+  <Modbus_Master_Multiple_Server index_max="5" >
+     <Index1>
+       <Modbus_Master_Multiple_Server_Enable default="no" range="yes/no">no</Modbus_Master_Multiple_Server_Enable>
+       <Modbus_Master_Multiple_Server_Enable_Socker2Serial default="no" range="yes/no">no</Modbus_Master_Multiple_Server_Enable_Socker2Serial>
+       <Modbus_Master_Multiple_Server_Server_Addr default="" range="0-64"></Modbus_Master_Multiple_Server_Server_Addr>
+       <Modbus_Master_Multiple_Server_Server_Port default="" range="1-65535">0</Modbus_Master_Multiple_Server_Server_Port>
+     </Index1>
+  </Modbus_Master_Multiple_Server>
+ </Modbus_Master_Conf>
+ <DMVPN_Conf>
+  <DMVPN_Enable default="yes" range="yes/no">no</DMVPN_Enable>
+  <DMVPN_GRE_Hub_Adress default="" range="1-64"></DMVPN_GRE_Hub_Adress>
+  <DMVPN_GRE_Local_Adress default="">0.0.0.0</DMVPN_GRE_Local_Adress>
+  <DMVPN_GRE_Remote_Adress default="">0.0.0.0</DMVPN_GRE_Remote_Adress>
+  <DMVPN_GRE_Netmask default="">0.0.0.0</DMVPN_GRE_Netmask>
+  <DMVPN_GRE_Secrets default="" range="0-128"></DMVPN_GRE_Secrets>
+  <DMVPN_Negotiation_Mode default="" range="MAIN_MODE/AGGRESSIVE_MODE">MAIN_MODE</DMVPN_Negotiation_Mode>
+  <DMVPN_LocalIP_Type default="" range="ID_DEFAULT/ID_MYID/ID_FQDN/ID_USER_FQDN">ID_DEFAULT</DMVPN_LocalIP_Type>
+  <DMVPN_LocalIP default="" range="1-64"></DMVPN_LocalIP>
+  <DMVPN_Encryption_Algorithm default="" range="/IPSEC_DES_ENCRYPT/IPSEC_3DES_ENCRYPT/IPSEC_AES128_ENCRYPT">IPSEC_3DES_ENCRYPT</DMVPN_Encryption_Algorithm>
+  <DMVPN_Authen_Algorithm default="" range="MD5_AUTH/SHA1_AUTH">MD5_AUTH</DMVPN_Authen_Algorithm>
+  <DMVPN_DH_Group default="" range="GROUP_1_MODP768/GROUP_2_MODP1024/GROUP_5_MODP1536">GROUP_2_MODP1024</DMVPN_DH_Group>
+  <DMVPN_PSK_Secrets default="" range="1-128"></DMVPN_PSK_Secrets>
+  <DMVPN_SA_Algorithm default="" range="IPSEC_DES_MD5_96/IPSEC_DES_SHA1_96/IPSEC_3DES_MD5_96/IPSEC_3DES_SHA1_96/IPSEC_AES128_MD5_96/IPSEC_AES128_SHA1_96">IPSEC_3DES_MD5_96</DMVPN_SA_Algorithm>
+  <DMVPN_PFS_Group default="" range="GROUP_NULL/GROUP_1_MODP768/GROUP_2_MODP1024/GROUP_5_MODP1536">GROUP_NULL</DMVPN_PFS_Group>
+  <DMVPN_Cisco_Secret default="" range="0-8"></DMVPN_Cisco_Secret>
+  <DMVPN_Cisco_HoldTime default="60" range="30-600">60</DMVPN_Cisco_HoldTime>
+ </DMVPN_Conf>
+ <AAA_Radius_Conf>
+  <AAA_Radius_Enable default="no" range="yes/no">no</AAA_Radius_Enable>
+  <AAA_Radius_Server default="" range="1-64"></AAA_Radius_Server>
+  <AAA_Radius_Port default="1812" range="1-65535">1812</AAA_Radius_Port>
+  <AAA_Radius_Password default="" range="0-16"></AAA_Radius_Password>
+ </AAA_Radius_Conf>
+ <AAA_Tacacs_Conf>
+  <AAA_Tacacs_Enable default="no" range="yes/no">no</AAA_Tacacs_Enable>
+  <AAA_Tacacs_Server default="" range="1-64"></AAA_Tacacs_Server>
+  <AAA_Tacacs_Port default="49" range="1-65535">49</AAA_Tacacs_Port>
+  <AAA_Tacacs_Password default="" range="0-16"></AAA_Tacacs_Password>
+ </AAA_Tacacs_Conf>
+ <AAA_Ldap_Conf>
+  <AAA_Ldap_Enable default="no" range="yes/no">no</AAA_Ldap_Enable>
+  <AAA_Ldap_Server default="" range="1-64"></AAA_Ldap_Server>
+  <AAA_Ldap_Port default="389" range="1-65535">389</AAA_Ldap_Port>
+  <AAA_Ldap_Base_DN default="" range="1-128"></AAA_Ldap_Base_DN>
+  <AAA_Ldap_UserName default="" range="1-128"></AAA_Ldap_UserName>
+  <AAA_Ldap_Password default="" range="1-32"></AAA_Ldap_Password>
+  <AAA_Ldap_Authen_Type default="None" range="None/StartTLS/SSL">None</AAA_Ldap_Authen_Type>
+  <AAA_Ldap_Authen_Peer default="no" range="yes/no">no</AAA_Ldap_Authen_Peer>
+ </AAA_Ldap_Conf>
+ <AAA_Authen_Conf>
+  <AAA_Authen_Telnet_Authen_1 default="Local" range="Null/Local/Radius/Tacacs/Ldap">Local</AAA_Authen_Telnet_Authen_1>
+  <AAA_Authen_Telnet_Authen_2 default="Null" range="Null/Local/Radius/Tacacs/Ldap">Null</AAA_Authen_Telnet_Authen_2>
+  <AAA_Authen_Telnet_Authen_3 default="Null" range="Null/Local/Radius/Tacacs/Ldap">Null</AAA_Authen_Telnet_Authen_3>
+  <AAA_Authen_SSL_Authen_1 default="Local" range="Null/Local/Radius/Tacacs/Ldap">Local</AAA_Authen_SSL_Authen_1>
+  <AAA_Authen_SSL_Authen_2 default="Null" range="Null/Local/Radius/Tacacs/Ldap">Null</AAA_Authen_SSL_Authen_2>
+  <AAA_Authen_SSL_Authen_3 default="Null" range="Null/Local/Radius/Tacacs/Ldap">Null</AAA_Authen_SSL_Authen_3>
+  <AAA_Authen_Web_Authen_1 default="Local" range="Null/Local/Radius/Tacacs/Ldap">Local</AAA_Authen_Web_Authen_1>
+  <AAA_Authen_Web_Authen_2 default="Null" range="Null/Local/Radius/Tacacs/Ldap">Null</AAA_Authen_Web_Authen_2>
+  <AAA_Authen_Web_Authen_3 default="Null" range="Null/Local/Radius/Tacacs/Ldap">Null</AAA_Authen_Web_Authen_3>
+ </AAA_Authen_Conf>
+ <FTP_Client_Conf>
+  <FTP_Client_Enable default="no" range="yes/no">no</FTP_Client_Enable>
+  <FTP_Client_Server_Address default="" range="1-64"></FTP_Client_Server_Address>
+  <FTP_Client_Server_Port default="21" range="1-65535">21</FTP_Client_Server_Port>
+  <FTP_Client_Username default="" range="1-64"></FTP_Client_Username>
+  <FTP_Client_Pwd default="" range="1-64"></FTP_Client_Pwd>
+  <FTP_Client_FileName_Prefix default="" range="0-64"></FTP_Client_FileName_Prefix>
+  <FTP_Client_FTP_Over_Tls default="no" range="yes/no">no</FTP_Client_FTP_Over_Tls>
+  <FTP_Client_Use_Timestamp default="no" range="yes/no">no</FTP_Client_Use_Timestamp>
+  <FTP_Client_FuncType default="" range="0-256">0</FTP_Client_FuncType>
+  <FTP_Client_CSV_File_Write_Interval default="30" range="5-1800">30</FTP_Client_CSV_File_Write_Interval>
+  <FTP_Client_Push_Interval default="60" range="1-65535">60</FTP_Client_Push_Interval>
+  <FTP_Client_File_Include_List index_max="64" >
+     <Index1>
+       <FTP_Client_RemoteChannel_isUsed default="no" range="yes/no">no</FTP_Client_RemoteChannel_isUsed>
+       <FTP_Client_RemoteChannel_Enable default="no" range="yes/no">no</FTP_Client_RemoteChannel_Enable>
+       <FTP_Client_RemoteChannel_Alias default="REM1" range="0-32">REM1</FTP_Client_RemoteChannel_Alias>
+     </Index1>
+  </FTP_Client_File_Include_List>
+  <FTP_Client_File_Include_Options_List index_max="10" >
+     <Index1>
+       <FTP_Client_Options_isUsed default="yes" range="yes/no">yes</FTP_Client_Options_isUsed>
+       <FTP_Client_Options_Enable default="no" range="yes/no">no</FTP_Client_Options_Enable>
+       <FTP_Client_Options_Alias default="" range="0-32">SIGN</FTP_Client_Options_Alias>
+     </Index1>
+     <Index2>
+       <FTP_Client_Options_isUsed default="yes" range="yes/no">yes</FTP_Client_Options_isUsed>
+       <FTP_Client_Options_Enable default="no" range="yes/no">no</FTP_Client_Options_Enable>
+       <FTP_Client_Options_Alias default="" range="0-32">COST</FTP_Client_Options_Alias>
+     </Index2>
+     <Index3>
+       <FTP_Client_Options_isUsed default="yes" range="yes/no">yes</FTP_Client_Options_isUsed>
+       <FTP_Client_Options_Enable default="no" range="yes/no">no</FTP_Client_Options_Enable>
+       <FTP_Client_Options_Alias default="" range="0-32">DIC1</FTP_Client_Options_Alias>
+     </Index3>
+     <Index4>
+       <FTP_Client_Options_isUsed default="yes" range="yes/no">yes</FTP_Client_Options_isUsed>
+       <FTP_Client_Options_Enable default="no" range="yes/no">no</FTP_Client_Options_Enable>
+       <FTP_Client_Options_Alias default="" range="0-32">DIS1</FTP_Client_Options_Alias>
+     </Index4>
+     <Index5>
+       <FTP_Client_Options_isUsed default="yes" range="yes/no">yes</FTP_Client_Options_isUsed>
+       <FTP_Client_Options_Enable default="no" range="yes/no">no</FTP_Client_Options_Enable>
+       <FTP_Client_Options_Alias default="" range="0-32">DIC2</FTP_Client_Options_Alias>
+     </Index5>
+     <Index6>
+       <FTP_Client_Options_isUsed default="yes" range="yes/no">yes</FTP_Client_Options_isUsed>
+       <FTP_Client_Options_Enable default="no" range="yes/no">no</FTP_Client_Options_Enable>
+       <FTP_Client_Options_Alias default="" range="0-32">DIS2</FTP_Client_Options_Alias>
+     </Index6>
+  </FTP_Client_File_Include_Options_List>
+ </FTP_Client_Conf>
+ <LoopBack_Conf>
+  <LoopBack_Address default="127.0.0.1">127.0.0.1</LoopBack_Address>
+  <LoopBack_NetMask default="255.0.0.0">255.0.0.0</LoopBack_NetMask>
+  <LoopBack_Mitiple_IP_List index_max="5" >
+     <Index1>
+       <Mitiple_IP_Enable default="no" range="yes/no">no</Mitiple_IP_Enable>
+       <Mitiple_IP_Adress default="0.0.0.0">0.0.0.0</Mitiple_IP_Adress>
+       <Mitiple_IP_NetMask default="0.0.0.0">0.0.0.0</Mitiple_IP_NetMask>
+     </Index1>
+  </LoopBack_Mitiple_IP_List>
+ </LoopBack_Conf>
+</XML_Config_File>

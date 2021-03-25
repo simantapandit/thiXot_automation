@@ -1,0 +1,701 @@
+<?xml version="1.0"?>
+<config_xml>
+  <cellular>
+    <sim max_entry_num="2">
+      <id type="int" desc="Index" range="1..2">1</id>
+      <card type="enum" desc="SIM Card" range="sim1 sim2">sim1</card>
+      <phone_number type="PHONE_NUM" desc="Phone Number"></phone_number>
+      <pin_code type="regex" desc="PIN Code" pattern="^[0-9]{4,8}$"></pin_code>
+      <extra_at_cmd desc="Extra AT Cmd"></extra_at_cmd>
+      <telnet_port type="int" desc="Telnet Port" range="0..65535">0</telnet_port>
+      <network_type type="enum" desc="Network Type" range="auto 2g_only 2g_first 3g_only 3g_first 4g_only 4g_first m1_only nb_only" default="auto">auto</network_type>
+      <band_select_type type="enum" desc="Band Select Type" range="all specify" default="all">all</band_select_type>
+      <band_settings>
+        <gsm_850 type="bool" desc="GSM 850" default="false">false</gsm_850>
+        <gsm_900 type="bool" desc="GSM 900" default="false">false</gsm_900>
+        <gsm_1800 type="bool" desc="GSM 1800" default="false">false</gsm_1800>
+        <gsm_1900 type="bool" desc="GSM 1900" default="false">false</gsm_1900>
+        <wcdma_800 type="bool" desc="WCDMA 800" default="false">false</wcdma_800>
+        <wcdma_850 type="bool" desc="WCDMA 850" default="false">false</wcdma_850>
+        <wcdma_900 type="bool" desc="WCDMA 900" default="false">false</wcdma_900>
+        <wcdma_1900 type="bool" desc="WCDMA 1900" default="false">false</wcdma_1900>
+        <wcdma_2100 type="bool" desc="WCDMA 2100" default="false">false</wcdma_2100>
+        <wcdma_1700 type="bool" desc="WCDMA 1700" default="false">false</wcdma_1700>
+        <wcdma_band19 type="bool" desc="WCDMA Band 19" default="false">false</wcdma_band19>
+        <lte_band1 type="bool" desc="LTE Band 1" default="false">false</lte_band1>
+        <lte_band2 type="bool" desc="LTE Band 2" default="false">false</lte_band2>
+        <lte_band3 type="bool" desc="LTE Band 3" default="false">false</lte_band3>
+        <lte_band4 type="bool" desc="LTE Band 4" default="false">false</lte_band4>
+        <lte_band5 type="bool" desc="LTE Band 5" default="false">false</lte_band5>
+        <lte_band7 type="bool" desc="LTE Band 7" default="false">false</lte_band7>
+        <lte_band8 type="bool" desc="LTE Band 8" default="false">false</lte_band8>
+        <lte_band13 type="bool" desc="LTE Band 13" default="false">false</lte_band13>
+        <lte_band17 type="bool" desc="LTE Band 17" default="false">false</lte_band17>
+        <lte_band18 type="bool" desc="LTE Band 18" default="false">false</lte_band18>
+        <lte_band19 type="bool" desc="LTE Band 19" default="false">false</lte_band19>
+        <lte_band20 type="bool" desc="LTE Band 20" default="false">false</lte_band20>
+        <lte_band21 type="bool" desc="LTE Band 21" default="false">false</lte_band21>
+        <lte_band25 type="bool" desc="LTE Band 25" default="false">false</lte_band25>
+        <lte_band28 type="bool" desc="LTE Band 28" default="false">false</lte_band28>
+        <lte_band31 type="bool" desc="LTE Band 31" default="false">false</lte_band31>
+        <lte_band38 type="bool" desc="LTE Band 38 (TDD)" default="false">false</lte_band38>
+        <lte_band39 type="bool" desc="LTE Band 39 (TDD)" default="false">false</lte_band39>
+        <lte_band40 type="bool" desc="LTE Band 40 (TDD)" default="false">false</lte_band40>
+        <lte_band41 type="bool" desc="LTE Band 41 (TDD)" default="false">false</lte_band41>
+      </band_settings>
+      <telit_band_settings>
+        <gsm_band type="enum" desc="GSM Bands" range="900_and_1800 900_and_1900 850_and_1800 850_and_1900" default="900_and_1800">900_and_1800</gsm_band>
+        <wcdma_band type="enum" desc="WCDMA Bands" range="850 900 1900 1900_and_850 2100_and_900 1700_and_2100 1900_and_2100 2100_and_1900_and_850" default="1900">1900</wcdma_band>
+      </telit_band_settings>
+      <debug_enable type="bool" desc="Debug Enable" default="true">true</debug_enable>
+      <verbose_debug_enable type="bool" desc="Verbose Debug Enable" default="false">false</verbose_debug_enable>
+    </sim>
+    <sim max_entry_num="2">
+      <id type="int" desc="Index" range="1..2">2</id>
+      <card type="enum" desc="SIM Card" range="sim1 sim2">sim2</card>
+      <phone_number type="PHONE_NUM" desc="Phone Number"></phone_number>
+      <pin_code type="regex" desc="PIN Code" pattern="^[0-9]{4,8}$"></pin_code>
+      <extra_at_cmd desc="Extra AT Cmd"></extra_at_cmd>
+      <telnet_port type="int" desc="Telnet Port" range="0..65535">0</telnet_port>
+      <network_type type="enum" desc="Network Type" range="auto 2g_only 2g_first 3g_only 3g_first 4g_only 4g_first m1_only nb_only" default="auto">auto</network_type>
+      <band_select_type type="enum" desc="Band Select Type" range="all specify" default="all">all</band_select_type>
+      <band_settings>
+        <gsm_850 type="bool" desc="GSM 850" default="false">false</gsm_850>
+        <gsm_900 type="bool" desc="GSM 900" default="false">false</gsm_900>
+        <gsm_1800 type="bool" desc="GSM 1800" default="false">false</gsm_1800>
+        <gsm_1900 type="bool" desc="GSM 1900" default="false">false</gsm_1900>
+        <wcdma_800 type="bool" desc="WCDMA 800" default="false">false</wcdma_800>
+        <wcdma_850 type="bool" desc="WCDMA 850" default="false">false</wcdma_850>
+        <wcdma_900 type="bool" desc="WCDMA 900" default="false">false</wcdma_900>
+        <wcdma_1900 type="bool" desc="WCDMA 1900" default="false">false</wcdma_1900>
+        <wcdma_2100 type="bool" desc="WCDMA 2100" default="false">false</wcdma_2100>
+        <wcdma_1700 type="bool" desc="WCDMA 1700" default="false">false</wcdma_1700>
+        <wcdma_band19 type="bool" desc="WCDMA Band 19" default="false">false</wcdma_band19>
+        <lte_band1 type="bool" desc="LTE Band 1" default="false">false</lte_band1>
+        <lte_band2 type="bool" desc="LTE Band 2" default="false">false</lte_band2>
+        <lte_band3 type="bool" desc="LTE Band 3" default="false">false</lte_band3>
+        <lte_band4 type="bool" desc="LTE Band 4" default="false">false</lte_band4>
+        <lte_band5 type="bool" desc="LTE Band 5" default="false">false</lte_band5>
+        <lte_band7 type="bool" desc="LTE Band 7" default="false">false</lte_band7>
+        <lte_band8 type="bool" desc="LTE Band 8" default="false">false</lte_band8>
+        <lte_band13 type="bool" desc="LTE Band 13" default="false">false</lte_band13>
+        <lte_band17 type="bool" desc="LTE Band 17" default="false">false</lte_band17>
+        <lte_band18 type="bool" desc="LTE Band 18" default="false">false</lte_band18>
+        <lte_band19 type="bool" desc="LTE Band 19" default="false">false</lte_band19>
+        <lte_band20 type="bool" desc="LTE Band 20" default="false">false</lte_band20>
+        <lte_band21 type="bool" desc="LTE Band 21" default="false">false</lte_band21>
+        <lte_band25 type="bool" desc="LTE Band 25" default="false">false</lte_band25>
+        <lte_band28 type="bool" desc="LTE Band 28" default="false">false</lte_band28>
+        <lte_band31 type="bool" desc="LTE Band 31" default="false">false</lte_band31>
+        <lte_band38 type="bool" desc="LTE Band 38 (TDD)" default="false">false</lte_band38>
+        <lte_band39 type="bool" desc="LTE Band 39 (TDD)" default="false">false</lte_band39>
+        <lte_band40 type="bool" desc="LTE Band 40 (TDD)" default="false">false</lte_band40>
+        <lte_band41 type="bool" desc="LTE Band 41 (TDD)" default="false">false</lte_band41>
+      </band_settings>
+      <telit_band_settings>
+        <gsm_band type="enum" desc="GSM Bands" range="900_and_1800 900_and_1900 850_and_1800 850_and_1900" default="900_and_1800">900_and_1800</gsm_band>
+        <wcdma_band type="enum" desc="WCDMA Bands" range="850 900 1900 1900_and_850 2100_and_900 1700_and_2100 1900_and_2100 2100_and_1900_and_850" default="1900">1900</wcdma_band>
+      </telit_band_settings>
+      <debug_enable type="bool" desc="Debug Enable" default="true">true</debug_enable>
+      <verbose_debug_enable type="bool" desc="Verbose Debug Enable" default="false">false</verbose_debug_enable>
+    </sim>
+  </cellular>
+  <ddns>
+    <enable type="bool" desc="Enable" default="false">false</enable>
+    <server_type type="enum" desc="Service Provider" range="dyndns no_ip 3322 custom" default="dyndns">dyndns</server_type>
+    <hostname desc="Hostname"></hostname>
+    <username desc="Username"></username>
+    <password desc="Password">S8ThaCGBPjcqq2L42NYhlQ==</password>
+    <url desc="URL"></url>
+  </ddns>
+  <dido/>
+  <email>
+    <enable type="bool" desc="Enable" default="false">false</enable>
+    <tls_enable type="bool" desc="Enable TLS/SSL" default="false">false</tls_enable>
+    <starttls_enable type="bool" desc="Enable STARTTLS" default="false">false</starttls_enable>
+    <outgoing_server desc="Outgoing Server"></outgoing_server>
+    <port type="NET_PORT" desc="Server Port" default="25">25</port>
+    <timeout type="int" desc="Timeout" range="10..29" default="10">10</timeout>
+    <auth_login type="bool" desc="Auth Login" default="false">false</auth_login>
+    <username desc="Username"></username>
+    <password desc="Password">S8ThaCGBPjcqq2L42NYhlQ==</password>
+    <from desc="From"></from>
+    <subject desc="Subject"></subject>
+  </email>
+  <ethernet>
+    <port_setting max_entry_num="1">
+      <id type="int" desc="Index" range="1..5">1</id>
+      <port type="enum" desc="Port" range="eth0 eth1 eth2 eth3 eth4">eth0</port>
+      <port_assignment type="enum" desc="Port Assignment" range="lan0 lan1 lan2 lan3 wan">lan0</port_assignment>
+      <poe_enable type="bool" desc="POE Enable" default="true">true</poe_enable>
+    </port_setting>
+  </ethernet>
+  <event>
+    <csq_threshold type="int" desc="Signal Quality Threshold" range="0..31" default="0">0</csq_threshold>
+    <notice_group max_entry_num="5">
+      <id type="int" desc="Index" range="1..5"/>
+      <desc desc="Description"/>
+      <send_sms type="bool" desc="Send SMS" default="false"/>
+      <phonenum type="PHONE_NUMBERS" desc="Phone Number"/>
+      <send_email type="bool" desc="Send Email" default="false"/>
+      <email_addresses desc="Email Addresses"/>
+      <save_to_nvm type="bool" desc="Save to NVM" default="false"/>
+      <system_startup type="bool" desc="System Startup" default="false"/>
+      <system_reboot type="bool" desc="System Reboot" default="false"/>
+      <system_time_updated type="bool" desc="System Time Update" default="false"/>
+      <config_changed type="bool" desc="Configuration Change" default="false"/>
+      <cellular_network_type_changed type="bool" desc="Cellular Network Type Change" default="false"/>
+      <cellular_data_stats_clear type="bool" desc="Cellular Data Stats Clear" default="false"/>
+      <cellular_data_traffic_overflow type="bool" desc="Cellular Data Traffic Overflow" default="false"/>
+      <poor_signal_quality type="bool" desc="Poor Signal Quality" default="false"/>
+      <link_switch type="bool" desc="Link Switching" default="false"/>
+      <wan_up type="bool" desc="WAN Up" default="false"/>
+      <wan_down type="bool" desc="WAN Down" default="false"/>
+      <wlan_up type="bool" desc="WLAN Up" default="false"/>
+      <wlan_down type="bool" desc="WLAN Down" default="false"/>
+      <wwan_up type="bool" desc="WWAN Up" default="false"/>
+      <wwan_down type="bool" desc="WWAN Down" default="false"/>
+      <ipsec_up type="bool" desc="IPSec Connection Up" default="false"/>
+      <ipsec_down type="bool" desc="IPSec Connection Down" default="false"/>
+      <openvpn_up type="bool" desc="OpenVPN Connection Up" default="false"/>
+      <openvpn_down type="bool" desc="OpenVPN Connection Down" default="false"/>
+      <lan_port_up type="bool" desc="LAN Port Link Up" default="false"/>
+      <lan_port_down type="bool" desc="LAN Port Link Down" default="false"/>
+      <usb_connected type="bool" desc="USB Device Connect" default="false"/>
+      <usb_removed type="bool" desc="USB Device Remove" default="false"/>
+      <ddns_update_success type="bool" desc="DDNS Update Success" default="false"/>
+      <ddns_update_fail type="bool" desc="DDNS Update Fail" default="false"/>
+      <sms_received type="bool" desc="Received SMS" default="false"/>
+      <sms_cmd_executed type="bool" desc="SMS Command Execute" default="false"/>
+      <di1_on type="bool" desc="DI 1 ON" default="false"/>
+      <di1_off type="bool" desc="DI 1 OFF" default="false"/>
+      <di1_counter_overflow type="bool" desc="DI 1 Counter Overflow" default="false"/>
+      <di2_on type="bool" desc="DI 2 ON" default="false"/>
+      <di2_off type="bool" desc="DI 2 OFF" default="false"/>
+      <di2_counter_overflow type="bool" desc="DI 2 Counter Overflow" default="false"/>
+      <di3_on type="bool" desc="DI 3 ON" default="false"/>
+      <di3_off type="bool" desc="DI 3 OFF" default="false"/>
+      <di3_counter_overflow type="bool" desc="DI 3 Counter Overflow" default="false"/>
+      <di4_on type="bool" desc="DI 4 ON" default="false"/>
+      <di4_off type="bool" desc="DI 4 OFF" default="false"/>
+      <di4_counter_overflow type="bool" desc="DI 4 Counter Overflow" default="false"/>
+    </notice_group>
+  </event>
+  <firewall>
+    <filtering_enable type="bool" desc="Enable Filtering" default="true">true</filtering_enable>
+    <default_filter_policy type="enum" desc="Default Filtering Policy" range="accept drop" default="accept">accept</default_filter_policy>
+    <remote_ssh_access type="bool" desc="Enable Remote SSH Access" default="false">true</remote_ssh_access>
+    <local_ssh_access type="bool" desc="Enable Local SSH Access" default="true">true</local_ssh_access>
+    <remote_telnet_access type="bool" desc="Enable Remote Telnet Access" default="false">true</remote_telnet_access>
+    <local_telnet_access type="bool" desc="Enable Local Telnet Access" default="true">true</local_telnet_access>
+    <remote_http_access type="bool" desc="Enable Remote HTTP Access" default="false">true</remote_http_access>
+    <local_http_access type="bool" desc="Enable Local HTTP Access" default="true">true</local_http_access>
+    <remote_https_access type="bool" desc="Enable Remote HTTPS Access" default="true">true</remote_https_access>
+    <remote_ping_respond type="bool" desc="Enable Remote Ping Respond" default="true">true</remote_ping_respond>
+    <dos_defending_enable type="bool" desc="Enable DOS Defending" default="true">true</dos_defending_enable>
+    <console_enable type="bool" desc="Enable Console" default="true">true</console_enable>
+    <vpn_nat_traversal_enable type="bool" desc="Enable VPN NAT Traversal" default="false">false</vpn_nat_traversal_enable>
+    <white_list max_entry_num="50">
+      <id type="int" desc="Index" range="1..50"/>
+      <desc desc="Description"/>
+      <src_addr type="IP_ADDR_MASK" desc="Source Address"/>
+    </white_list>
+    <filter_list max_entry_num="50">
+      <id type="int" desc="Index" range="1..50"/>
+      <desc desc="Description"/>
+      <src_addr type="ALL_IP_TYPE" desc="Source Address"/>
+      <src_port type="NET_PORTS" desc="Source Port"/>
+      <src_mac type="MAC_ADDR" desc="Source MAC"/>
+      <target_addr desc="Target Address"/>
+      <target_port type="NET_PORTS" desc="Target Port"/>
+      <protocol type="enum" desc="Protocol" range="all tcp udp icmp tcpudp" default="all"/>
+      <action type="enum" desc="Action" range="accept drop" default="drop"/>
+    </filter_list>
+    <port_mapping max_entry_num="50">
+      <id type="int" desc="Index" range="1..50"/>
+      <desc desc="Description"/>
+      <remote_ip type="IP_ADDR_MASK" desc="Remote IP"/>
+      <internet_port type="NET_PORTS" desc="Internet Port"/>
+      <local_ip type="IP_ADDR" desc="Local IP"/>
+      <local_port type="NET_PORTS" desc="Local Port" range="1..65535"/>
+      <protocol type="enum" desc="Protocol" range="tcp udp tcpudp" default="tcpudp"/>
+    </port_mapping>
+    <custom_list max_entry_num="50">
+      <id type="int" desc="Index" range="1..50"/>
+      <desc desc="Description"/>
+      <rule desc="Rule"/>
+    </custom_list>
+    <dmz_enable type="bool" desc="Enable DMZ" default="false">false</dmz_enable>
+    <dmz_host type="IP_ADDR" desc="Host IP Address"></dmz_host>
+    <dmz_source type="ALL_IP_TYPE" desc="Source IP Address"></dmz_source>
+  </firewall>
+  <gre>
+    <tunnel max_entry_num="6">
+      <id type="int" desc="Index" range="1..6"/>
+      <enable type="bool" desc="Enable" default="true"/>
+      <desc desc="Description"/>
+      <remote_ip type="IP_ADDR" desc="Remote IP Address"/>
+      <local_virtual_ip type="IP_ADDR" desc="Local Virtual IP Address"/>
+      <local_virtual_netmask type="IP_ADDR" desc="Local Virtual Netmask"/>
+      <remote_virtual_ip type="IP_ADDR" desc="Remote Virtual IP Address"/>
+      <default_route_enable type="bool" desc="Enable Default Route" default="false"/>
+      <nat_enable type="bool" desc="Enable NAT" default="false"/>
+      <secrets type="regex" desc="Secrets"/>
+      <link_binding type="enum" desc="Link Binding" range="unspecified wwan1 wwan2 wan wlan" default="unspecified"/>
+    </tunnel>
+  </gre>
+  <ip_passthrough>
+    <enable type="bool" desc="Enable" default="false">false</enable>
+  </ip_passthrough>
+  <ipsec>
+    <nat_traversal type="bool" desc="Enable NAT Traversal" default="true">true</nat_traversal>
+    <keepalive type="int" desc="Keepalive" range="0..1800" default="60">60</keepalive>
+    <debug_enable type="bool" desc="Debug Enable" default="false">false</debug_enable>
+    <tunnel max_entry_num="6">
+      <id type="int" desc="Index" range="1..6"/>
+      <enable type="bool" desc="Enable" default="true"/>
+      <desc desc="Description"/>
+      <gateway desc="Gateway"/>
+      <mode type="enum" desc="Mode" range="tunnel transport" default="tunnel"/>
+      <protocol type="enum" desc="Protocol" range="esp ah" default="esp"/>
+      <local_subnet type="IP_ADDR_MASK" desc="Local Subnet"/>
+      <remote_subnet type="IP_ADDR_MASK" desc="Remote Subnet"/>
+      <interface type="enum" desc="Link Binding" range="unspecified wwan1 wwan2 wan wlan" default="unspecified"/>
+      <ike_type type="enum" desc="IKE Type" range="ikev1 ikev2" default="ikev1"/>
+      <negotiation_mode type="enum" desc="Negotiation Mode" range="main aggressive" default="main"/>
+      <encrypt_algorithm type="enum" desc="Encryption Algorithm" range="3des aes128 aes192 aes256" default="3des"/>
+      <auth_algorithm type="enum" desc="Authentication Algorithm" range="md5 sha1 sha2_256 sha2_512" default="md5"/>
+      <dh_group type="enum" desc="IKE DH Group" range="modp768 modp1024 modp1536 modp2048 modp3072 modp4096 modp6144 modp8192" default="modp1024"/>
+      <auth_type type="enum" desc="Authentication Type" range="psk ca xauth_psk xauth_ca" default="psk"/>
+      <secret desc="PSK Secret"/>
+      <private_key_password desc="Private Key Password"/>
+      <local_id_type type="enum" desc="Local ID Type" range="default fqdn user_fqdn" default="default"/>
+      <local_id desc="Local ID"/>
+      <remote_id_type type="enum" desc="Remote ID Type" range="default fqdn user_fqdn" default="default"/>
+      <remote_id desc="Remote ID"/>
+      <xauth_username desc="Username"/>
+      <xauth_password desc="Password"/>
+      <ike_lifetime type="int" desc="IKE Lifetime" range="60..86400" default="86400"/>
+      <sa_encrypt_algorithm type="enum" desc="Encryption Algorithm" range="3des aes128 aes192 aes256" default="3des"/>
+      <sa_auth_algorithm type="enum" desc="Authentication Algorithm" range="md5 sha1 sha2_256 sha2_512" default="md5"/>
+      <pfs_group type="enum" desc="PFS Group" range="null modp768 modp1024 modp1536 modp2048 modp3072 modp4096 modp6144 modp8192" default="modp1024"/>
+      <sa_lifetime type="int" desc="SA Lifetime" range="60..86400" default="28800"/>
+      <dpd_interval type="int" desc="DPD Interval" range="10..3600" default="60"/>
+      <dpd_max_failures type="int" desc="DPD Failures" range="1..3600" default="180"/>
+      <compress_enable type="bool" desc="Enable Compression" default="false"/>
+      <expert desc="Expert Options"/>
+    </tunnel>
+  </ipsec>
+  <lan>
+    <network max_entry_num="1">
+      <id type="int" desc="Index" range="1..5">1</id>
+      <interface type="enum" desc="Interface" range="lan0 lan1 lan2 lan3 lan4" default="lan0">lan0</interface>
+      <ip type="IP_ADDR" desc="IP Address" default="192.168.0.1">192.168.0.1</ip>
+      <netmask type="NETMASK" desc="Netmask" default="255.255.255.0">255.255.255.0</netmask>
+      <mtu type="int" desc="MTU" range="68..1500" default="1500">1500</mtu>
+      <dhcp>
+        <enable type="bool" desc="Enable" default="true">true</enable>
+        <mode type="enum" desc="Mode" range="server relay" default="server">server</mode>
+        <relay_server type="IP_ADDR" desc="DHCP Server For Relay"></relay_server>
+        <pool_start type="IP_ADDR" desc="IP Pool Start" default="192.168.0.2">192.168.53.146</pool_start>
+        <pool_end type="IP_ADDR" desc="IP Pool End" default="192.168.0.100">192.168.53.150</pool_end>
+        <netmask type="NETMASK" desc="Subnet Mask" default="255.255.255.0">255.255.255.248</netmask>
+        <gateway type="IP_ADDR" desc="Gateway"></gateway>
+        <primary_dns type="IP_ADDR" desc="Primary DNS"></primary_dns>
+        <secondary_dns type="IP_ADDR" desc="Secondary DNS"></secondary_dns>
+        <wins_server type="IP_ADDR" desc="WINS Server"></wins_server>
+        <lease_time type="int" desc="Lease Time" range="10..10080" default="120">120</lease_time>
+        <static_lease desc="Static Lease"></static_lease>
+        <expert_options desc="Expert Options"></expert_options>
+        <debug_enable type="bool" desc="Debug Enable" default="false">false</debug_enable>
+      </dhcp>
+    </network>
+    <multi_ip max_entry_num="10">
+      <id type="int" desc="Index" range="1..20">10</id>
+      <interface type="enum" desc="Interface" range="lan0 lan1 lan2 lan3 lan4">lan0</interface>
+      <ip type="IP_ADDR" desc="IP Address">192.168.53.145</ip>
+      <netmask type="NETMASK" desc="Netmask">255.255.255.248</netmask>
+    </multi_ip>
+    <vlan max_entry_num="10">
+      <id type="int" desc="Index" range="1..10"/>
+      <enable type="bool" desc="Enable" default="true"/>
+      <interface type="enum" desc="Interface" range="lan0 lan1 lan2 lan3 lan4" default="lan0"/>
+      <vid type="int" desc="VID" range="1..4094" default="100"/>
+      <ip type="IP_ADDR" desc="IP Address"/>
+      <netmask type="NETMASK" desc="Netmask"/>
+    </vlan>
+  </lan>
+  <link_manager>
+    <primary_link type="enum" desc="Primary Link" range="wwan1 wwan2 wan wlan" default="wwan1">wwan1</primary_link>
+    <backup_link type="enum" desc="Backup Link" range="none wwan1 wwan2 wan wlan" default="wwan2">wwan2</backup_link>
+    <backup_mode type="enum" desc="Backup Mode" range="cold_backup warm_backup load_balancing" default="cold_backup">cold_backup</backup_mode>
+    <revert_interval type="int" desc="Revert Interval" range="0..3600" default="0">5</revert_interval>
+    <emergency_reboot type="bool" desc="Emergency Reboot" default="false">true</emergency_reboot>
+    <link max_entry_num="2">
+      <id type="int" desc="Index" range="1..4">1</id>
+      <type type="enum" desc="Type" range="wwan1 wwan2 wan wlan" default="wwan1">wwan1</type>
+      <desc desc="Description">Optus</desc>
+      <connection_type type="enum" desc="Connection Type" range="dhcp static pppoe" default="dhcp">dhcp</connection_type>
+      <wwan>
+        <auto_apn type="bool" desc="Automatic APN Selection" default="true">false</auto_apn>
+        <apn desc="APN" default="internet">S8ThaCGBPjff1NrNL4gYZHHj2nh3WkU9</apn>
+        <username desc="Username"></username>
+        <password desc="Password">S8ThaCGBPjcqq2L42NYhlQ==</password>
+        <dialup_number desc="Dialup Number" range="3..32" default="*99***1#">*99***1#</dialup_number>
+        <auth_type type="enum" desc="Authentication Type" range="auto pap chap" default="auto">auto</auth_type>
+        <ppp_preferred type="bool" desc="PPP Preferred" default="false">false</ppp_preferred>
+        <switch_by_data_allowance type="bool" desc="Switch SIM By Data Allowance" default="false">false</switch_by_data_allowance>
+        <data_allowance type="int" desc="Data Allowance" range="0..200000" default="0">0</data_allowance>
+        <billing_day type="int" desc="Billing Day" range="1..31" default="1">1</billing_day>
+      </wwan>
+      <static_addr>
+        <ip type="IP_ADDR_MASK" desc="IP Address"></ip>
+        <gateway type="IP_ADDR" desc="Gateway"></gateway>
+        <dns1 type="IP_ADDR" desc="Primary DNS"></dns1>
+        <dns2 type="IP_ADDR" desc="Secondary DNS"></dns2>
+      </static_addr>
+      <pppoe>
+        <username desc="Username"></username>
+        <password desc="Password">S8ThaCGBPjcqq2L42NYhlQ==</password>
+        <auth_type type="enum" desc="Authentication Type" range="auto pap chap" default="auto">auto</auth_type>
+        <expert_options desc="PPP Expert Options"></expert_options>
+      </pppoe>
+      <ping>
+        <enable type="bool" desc="Enable" default="true">true</enable>
+        <primary_server desc="Primary Server" default="8.8.8.8">8.8.8.8</primary_server>
+        <secondary_server desc="Secondary Server" default="114.114.114.114">8.8.4.4</secondary_server>
+        <interval type="int" desc="Interval" range="10..1800" default="300">300</interval>
+        <retry_interval type="int" desc="Retry Interval" range="3..600" default="5">5</retry_interval>
+        <timeout type="int" desc="Timeout" range="1..10" default="3">3</timeout>
+        <tries type="int" desc="Max Ping Tries" range="1..10" default="3">3</tries>
+      </ping>
+      <nat_enable type="bool" desc="NAT Enable" default="true">true</nat_enable>
+      <mtu type="int" desc="MTU" range="68..1500" default="1500">1500</mtu>
+      <weight type="int" desc="Weight" range="1..100" default="1">1</weight>
+      <upload_bandwidth type="int" desc="Upload Bandwidth" range="1..10000000" default="10000">10000</upload_bandwidth>
+      <download_bandwidth type="int" desc="Download Bandwidth" range="1..1000000" default="10000">10000</download_bandwidth>
+      <dns1_overrided type="IP_ADDR" desc="Overrided Primary DNS"></dns1_overrided>
+      <dns2_overrided type="IP_ADDR" desc="Overrided Secondary DNS"></dns2_overrided>
+      <debug_enable type="bool" desc="Debug Enable" default="true">true</debug_enable>
+      <verbose_debug_enable type="bool" desc="Verbose Debug Enable" default="false">false</verbose_debug_enable>
+    </link>
+    <link max_entry_num="2">
+      <id type="int" desc="Index" range="1..4">2</id>
+      <type type="enum" desc="Type" range="wwan1 wwan2 wan wlan" default="wwan1">wwan2</type>
+      <desc desc="Description">Telstra</desc>
+      <connection_type type="enum" desc="Connection Type" range="dhcp static pppoe" default="dhcp">dhcp</connection_type>
+      <wwan>
+        <auto_apn type="bool" desc="Automatic APN Selection" default="true">false</auto_apn>
+        <apn desc="APN" default="internet">S8ThaCGBPje10M2XCRO97jLTrHMcxdCaZ8Ncl15pGPU=</apn>
+        <username desc="Username"></username>
+        <password desc="Password">S8ThaCGBPjcqq2L42NYhlQ==</password>
+        <dialup_number desc="Dialup Number" range="3..32" default="*99***1#">*99***1#</dialup_number>
+        <auth_type type="enum" desc="Authentication Type" range="auto pap chap" default="auto">auto</auth_type>
+        <ppp_preferred type="bool" desc="PPP Preferred" default="false">false</ppp_preferred>
+        <switch_by_data_allowance type="bool" desc="Switch SIM By Data Allowance" default="false">false</switch_by_data_allowance>
+        <data_allowance type="int" desc="Data Allowance" range="0..200000" default="0">0</data_allowance>
+        <billing_day type="int" desc="Billing Day" range="1..31" default="1">1</billing_day>
+      </wwan>
+      <static_addr>
+        <ip type="IP_ADDR_MASK" desc="IP Address"></ip>
+        <gateway type="IP_ADDR" desc="Gateway"></gateway>
+        <dns1 type="IP_ADDR" desc="Primary DNS"></dns1>
+        <dns2 type="IP_ADDR" desc="Secondary DNS"></dns2>
+      </static_addr>
+      <pppoe>
+        <username desc="Username"></username>
+        <password desc="Password">S8ThaCGBPjcqq2L42NYhlQ==</password>
+        <auth_type type="enum" desc="Authentication Type" range="auto pap chap" default="auto">auto</auth_type>
+        <expert_options desc="PPP Expert Options"></expert_options>
+      </pppoe>
+      <ping>
+        <enable type="bool" desc="Enable" default="true">true</enable>
+        <primary_server desc="Primary Server" default="8.8.8.8">8.8.8.8</primary_server>
+        <secondary_server desc="Secondary Server" default="114.114.114.114">8.8.4.4</secondary_server>
+        <interval type="int" desc="Interval" range="10..1800" default="300">300</interval>
+        <retry_interval type="int" desc="Retry Interval" range="3..600" default="5">5</retry_interval>
+        <timeout type="int" desc="Timeout" range="1..10" default="3">3</timeout>
+        <tries type="int" desc="Max Ping Tries" range="1..10" default="3">3</tries>
+      </ping>
+      <nat_enable type="bool" desc="NAT Enable" default="true">true</nat_enable>
+      <mtu type="int" desc="MTU" range="68..1500" default="1500">1500</mtu>
+      <weight type="int" desc="Weight" range="1..100" default="1">1</weight>
+      <upload_bandwidth type="int" desc="Upload Bandwidth" range="1..10000000" default="10000">10000</upload_bandwidth>
+      <download_bandwidth type="int" desc="Download Bandwidth" range="1..1000000" default="10000">10000</download_bandwidth>
+      <dns1_overrided type="IP_ADDR" desc="Overrided Primary DNS"></dns1_overrided>
+      <dns2_overrided type="IP_ADDR" desc="Overrided Secondary DNS"></dns2_overrided>
+      <debug_enable type="bool" desc="Debug Enable" default="true">true</debug_enable>
+      <verbose_debug_enable type="bool" desc="Verbose Debug Enable" default="false">false</verbose_debug_enable>
+    </link>
+  </link_manager>
+  <ntp>
+    <timezone type="enum" desc="Time Zone" range="-12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11 12" default="8">8</timezone>
+    <expert_setting desc="Expert Setting">Australia/Sydney</expert_setting>
+    <client_enable type="bool" desc="Enable" default="true">true</client_enable>
+    <primary_server desc="Primary NTP Server" default="pool.ntp.org">pool.ntp.org</primary_server>
+    <secondary_server desc="Secondary NTP Server"></secondary_server>
+    <update_interval type="int" desc="NTP Update Interval" range="0..3600" default="0">0</update_interval>
+    <server_enable type="bool" desc="Enable" default="false">false</server_enable>
+  </ntp>
+  <openvpn>
+    <tunnel max_entry_num="6">
+      <id type="int" desc="Index" range="1..6"/>
+      <enable type="bool" desc="Enable" default="true"/>
+      <desc desc="Description"/>
+      <mode type="enum" desc="Mode" range="client server p2p" default="p2p"/>
+      <protocol type="enum" desc="Protocol" range="udp tcp_client tcp_server" default="udp"/>
+      <peer_addr desc="Peer Address"/>
+      <peer_port type="regex" desc="Peer Port" default="1194"/>
+      <listen_ip type="IP_ADDR" desc="Listen IP Address"/>
+      <listen_port type="regex" desc="Listen Port" default="1194"/>
+      <interface_type type="enum" desc="Interface Type" range="tun tap" default="tun"/>
+      <auth_type type="enum" desc="Authentication Type" range="none preshared password x509ca x509ca_password" default="none"/>
+      <username desc="Username"/>
+      <password desc="Password"/>
+      <local_ip type="IP_ADDR" desc="Local IP" default="10.8.0.1"/>
+      <remote_ip type="IP_ADDR" desc="Remote IP" default="10.8.0.2"/>
+      <netmask type="NETMASK" desc="Netmask" default="255.255.255.0"/>
+      <ip_pool_enable type="bool" desc="Enable IP Pool" default="false"/>
+      <ip_pool_start type="IP_ADDR" desc="IP Pool Start" default="10.8.0.5"/>
+      <ip_pool_end type="IP_ADDR" desc="IP Pool End" default="10.8.0.254"/>
+      <client_subnet type="IP_ADDR" desc="Client Subnet" default="10.8.0.0"/>
+      <client_netmask type="NETMASK" desc="Client Subnet Netmask" default="255.255.255.0"/>
+      <encryption type="enum" desc="Encrypt Algorithm" range="bf des des_ede3 aes_128 aes_192 aes_256" default="bf"/>
+      <reneg_interval type="int" desc="Renegotiation Interval" range="60..10000000" default="86400"/>
+      <max_client_num type="int" desc="Max Clients" range="1..20" default="10"/>
+      <keepalive_interval type="int" desc="Keepalive Interval" range="10..3600" default="20"/>
+      <keepalive_timeout type="int" desc="Keepalive Timeout" range="10..3600" default="120"/>
+      <mtu type="regex" desc="MTU" default="1500"/>
+      <fragment type="regex" desc="Max Frame Size" range="1024..1500" default=""/>
+      <private_key_password desc="Private Key Password"/>
+      <compress_enable type="bool" desc="Enable Compression" default="true"/>
+      <default_gateway_enable type="bool" desc="Enable Default Gateway" default="false"/>
+      <bridge_with_lan0_enable type="bool" desc="Enable Bridge With LAN0" default="true"/>
+      <nat_enable type="bool" desc="Enable NAT" default="false"/>
+      <dns_override_enable type="bool" desc="Enable DNS overrid" default="false"/>
+      <verbose_level type="enum" desc="Verbose Level" range="0 1 2 3 4 5 6 7 8 9 10 11" default="0"/>
+      <hmac_firwall type="bool" desc="Enable HMAC Firewall" default="false"/>
+      <crl_enable type="bool" desc="Enable Crl" default="false"/>
+      <c2c_enable type="bool" desc="Enable Client To Client" default="false"/>
+      <dup_client_enable type="bool" desc="Enable Dup Client" default="false"/>
+      <ip_persist_enable type="bool" desc="Enable IP Persist" default="true"/>
+      <pkcs12_enable type="bool" desc="Enable PKCS#12" default="false"/>
+      <ns_cert_type_enable type="bool" desc="Enable nsCertType" default="false"/>
+      <expert desc="Expert Options"/>
+    </tunnel>
+    <client_manage max_entry_num="20">
+      <id type="int" desc="Index" range="1..20"/>
+      <enable type="bool" desc="Enable" default="true"/>
+      <common_name desc="Common Name"/>
+      <client_ip desc="Client IP Address"/>
+      <route type="regex" desc="Route"/>
+      <push_route type="regex" desc="Push Route"/>
+    </client_manage>
+  </openvpn>
+  <quad_serial_port_type>
+    <port_type type="enum" desc="Serial Port Type" range="rs485 rs232" default="rs485">rs485</port_type>
+  </quad_serial_port_type>
+  <reboot>
+    <period type="int" desc="Periodic Reboot" range="0..120">0</period>
+    <daily_time type="regex" desc="Daily Reboot Time" pattern="^((1|0?)[0-9]|2[0-3]):([0-5][0-9])$"></daily_time>
+  </reboot>
+  <robustlink>
+    <enable type="bool" desc="Enable" default="false">true</enable>
+    <server_addr type="regex" desc="Server Address" pattern="^[a-zA-Z0-9\.\-]+$">rms.thinxtra.com</server_addr>
+    <server_port type="int" desc="Server Port" range="1..65535" default="31000">31000</server_port>
+    <data_forward_enable type="bool" desc="Enable Data Forward" default="false">false</data_forward_enable>
+    <password type="regex" desc="Password" pattern="^[a-zA-Z0-9@\.\#\$\*\!\-]{5,32}$">S8ThaCGBPjew2absmewwdouIotVW3lwb</password>
+    <system_startup type="bool" desc="System Startup" default="false">false</system_startup>
+    <system_reboot type="bool" desc="System Reboot" default="false">false</system_reboot>
+    <system_time_updated type="bool" desc="System Time Update" default="false">false</system_time_updated>
+    <config_changed type="bool" desc="Configuration Change" default="false">false</config_changed>
+    <cellular_network_type_changed type="bool" desc="Cellular Network Type Change" default="false">false</cellular_network_type_changed>
+    <cellular_data_stats_clear type="bool" desc="Cellular Data Stats Clear" default="false">false</cellular_data_stats_clear>
+    <cellular_data_traffic_overflow type="bool" desc="Cellular Data Traffic Overflow" default="false">false</cellular_data_traffic_overflow>
+    <poor_signal_quality type="bool" desc="Poor Signal Quality" default="false">false</poor_signal_quality>
+    <link_switch type="bool" desc="Link Switching" default="false">false</link_switch>
+    <wan_up type="bool" desc="WAN Up" default="false">false</wan_up>
+    <wan_down type="bool" desc="WAN Down" default="false">false</wan_down>
+    <wlan_up type="bool" desc="WLAN Up" default="false">false</wlan_up>
+    <wlan_down type="bool" desc="WLAN Down" default="false">false</wlan_down>
+    <wwan_up type="bool" desc="WWAN Up" default="false">false</wwan_up>
+    <wwan_down type="bool" desc="WWAN Down" default="false">false</wwan_down>
+    <ipsec_up type="bool" desc="IPSec Connection Up" default="false">false</ipsec_up>
+    <ipsec_down type="bool" desc="IPSec Connection Down" default="false">false</ipsec_down>
+    <openvpn_up type="bool" desc="OpenVPN Connection Up" default="false">false</openvpn_up>
+    <openvpn_down type="bool" desc="OpenVPN Connection Down" default="false">false</openvpn_down>
+    <lan_port_up type="bool" desc="LAN Port Link Up" default="false">false</lan_port_up>
+    <lan_port_down type="bool" desc="LAN Port Link Down" default="false">false</lan_port_down>
+    <usb_connected type="bool" desc="USB Device Connect" default="false">false</usb_connected>
+    <usb_removed type="bool" desc="USB Device Remove" default="false">false</usb_removed>
+    <ddns_update_success type="bool" desc="DDNS Update Success" default="false">false</ddns_update_success>
+    <ddns_update_fail type="bool" desc="DDNS Update Fail" default="false">false</ddns_update_fail>
+    <sms_received type="bool" desc="Received SMS" default="false">false</sms_received>
+    <sms_cmd_executed type="bool" desc="SMS Command Execute" default="false">false</sms_cmd_executed>
+    <di1_on type="bool" desc="DI 1 ON" default="false">false</di1_on>
+    <di1_off type="bool" desc="DI 1 OFF" default="false">false</di1_off>
+    <di1_counter_overflow type="bool" desc="DI 1 Counter Overflow" default="false">false</di1_counter_overflow>
+    <di2_on type="bool" desc="DI 2 ON" default="false">false</di2_on>
+    <di2_off type="bool" desc="DI 2 OFF" default="false">false</di2_off>
+    <di2_counter_overflow type="bool" desc="DI 2 Counter Overflow" default="false">false</di2_counter_overflow>
+    <di3_on type="bool" desc="DI 3 ON" default="false">false</di3_on>
+    <di3_off type="bool" desc="DI 3 OFF" default="false">false</di3_off>
+    <di3_counter_overflow type="bool" desc="DI 3 Counter Overflow" default="false">false</di3_counter_overflow>
+    <di4_on type="bool" desc="DI 4 ON" default="false">false</di4_on>
+    <di4_off type="bool" desc="DI 4 OFF" default="false">false</di4_off>
+    <di4_counter_overflow type="bool" desc="DI 4 Counter Overflow" default="false">false</di4_counter_overflow>
+  </robustlink>
+  <robustvpn>
+    <enable type="bool" desc="Enable" default="false">true</enable>
+    <server_addr type="regex" desc="Server Address" pattern="^[a-zA-Z0-9\.\-]+$">vpnserver.thinxtra.com</server_addr>
+    <server_port type="int" desc="Server Port" range="1..65535" default="443">443</server_port>
+    <username desc="Username">tempvpnuser</username>
+    <password type="regex" desc="Password" pattern="^[a-zA-Z0-9@\.\#\$\*\-]{5,32}$">thinxtraiotsigfox</password>
+  </robustvpn>
+  <route>
+    <static_route max_entry_num="20">
+      <id type="int" desc="Index" range="1..20"/>
+      <desc desc="Description"/>
+      <destination type="IP_ADDR" desc="Destination"/>
+      <netmask type="NETMASK" desc="Netmask"/>
+      <gateway type="IP_ADDR" desc="Gateway"/>
+      <interface type="enum" desc="Interface" range="wan wwan wwan1 wwan2 wlan0 lan0 lan1 lan2 lan3 lan4 tun1 tun2 tun3 tap1 tap2 tap3 gretun1 gretun2 gretun3 dmvpngre"/>
+    </static_route>
+  </route>
+  <serial_port>
+    <port_setting max_entry_num="2">
+      <id type="int" desc="Index" range="1..2">1</id>
+      <port type="enum" desc="Port" range="com1 com2">com1</port>
+      <enable type="bool" desc="Enable" default="false">true</enable>
+      <baud_rate type="enum" desc="Baud Rate" range="300 600 1200 2400 4800 9600 19200 38400 57600 115200 230400" default="115200">9600</baud_rate>
+      <data_bits type="enum" desc="Data Bits" range="7 8" default="8">8</data_bits>
+      <stop_bits type="enum" desc="Stop Bits" range="1 2" default="1">1</stop_bits>
+      <parity type="enum" desc="Parity" range="none odd even" default="none">none</parity>
+      <packing_timeout type="int" desc="Packing Timeout" range="10..1000" default="50">50</packing_timeout>
+      <packing_length type="int" desc="Packing Length" range="1..3000" default="1200">1200</packing_length>
+      <application_mode type="enum" desc="Application Mode" range="transparent modbus_rtu_gateway modbus_ascii_gateway" default="transparent">transparent</application_mode>
+      <protocol type="enum" desc="Protocol" range="tcp_client tcp_server udp" default="tcp_client">tcp_server</protocol>
+      <local_ip desc="Local IP"></local_ip>
+      <local_port type="NET_PORT" desc="Local Port">502</local_port>
+      <server_addr desc="Server Address"></server_addr>
+      <server_port type="NET_PORT" desc="Server Port"></server_port>
+    </port_setting>
+    <port_setting max_entry_num="2">
+      <id type="int" desc="Index" range="1..2">2</id>
+      <port type="enum" desc="Port" range="com1 com2">com2</port>
+      <enable type="bool" desc="Enable" default="false">false</enable>
+      <baud_rate type="enum" desc="Baud Rate" range="300 600 1200 2400 4800 9600 19200 38400 57600 115200 230400" default="115200">115200</baud_rate>
+      <data_bits type="enum" desc="Data Bits" range="7 8" default="8">8</data_bits>
+      <stop_bits type="enum" desc="Stop Bits" range="1 2" default="1">1</stop_bits>
+      <parity type="enum" desc="Parity" range="none odd even" default="none">none</parity>
+      <packing_timeout type="int" desc="Packing Timeout" range="10..1000" default="50">50</packing_timeout>
+      <packing_length type="int" desc="Packing Length" range="1..3000" default="1200">1200</packing_length>
+      <application_mode type="enum" desc="Application Mode" range="transparent modbus_rtu_gateway modbus_ascii_gateway" default="transparent">transparent</application_mode>
+      <protocol type="enum" desc="Protocol" range="tcp_client tcp_server udp" default="tcp_client">tcp_client</protocol>
+      <local_ip desc="Local IP"></local_ip>
+      <local_port type="NET_PORT" desc="Local Port"></local_port>
+      <server_addr desc="Server Address"></server_addr>
+      <server_port type="NET_PORT" desc="Server Port"></server_port>
+    </port_setting>
+  </serial_port>
+  <sms>
+    <sms_mgmt_enable type="bool" desc="Enable" default="true">true</sms_mgmt_enable>
+    <auth_type type="enum" desc="Authentication Type" range="password phonenum both" default="password">both</auth_type>
+    <sms_mgmt_phonenum type="PHONE_NUMBERS" desc="Phone Number">+61421483725;+5277;+61403959983</sms_mgmt_phonenum>
+  </sms>
+  <snmp>
+    <enable type="bool" desc="Enable SNMP Agent" default="false">true</enable>
+    <port type="int" desc="Port" range="1..65535" default="161">161</port>
+    <version type="enum" desc="Version" range="snmpv1v2v3 snmpv3" default="snmpv3">snmpv1v2v3</version>
+    <location desc="Location Info">RENAME-hostname</location>
+    <contact desc="Contact Info">info@thinxtra.com</contact>
+    <sysname desc="System Name">RENAME-hostname</sysname>
+    <rocommunity desc="Readonly Community Name">Th!nxtrA4</rocommunity>
+    <rwcommunity desc="Readwrite Community Name"></rwcommunity>
+    <auth_algorithm type="enum" desc="Authentication Algorithm" range="md5 sha" default="md5">md5</auth_algorithm>
+    <privacy_algorithm type="enum" desc="Privacy Algorithm" range="des aes" default="des">des</privacy_algorithm>
+    <trap_enable type="bool" desc="Enable SNMP Trap" default="false">false</trap_enable>
+    <trap_version type="enum" desc="Version" range="snmpv1 snmpv2c snmpv3" default="snmpv3">snmpv3</trap_version>
+    <trap_receiver_addr desc="Receiver Address"></trap_receiver_addr>
+    <trap_receiver_port type="int" desc="Receiver Port" range="1..65535" default="162">162</trap_receiver_port>
+    <trap_username desc="Username"></trap_username>
+    <trap_auth_algorithm type="enum" desc="Authentication Algorithm" range="md5 sha" default="md5">md5</trap_auth_algorithm>
+    <trap_auth_password type="regex" desc="Authentication Password" pattern="^[a-zA-Z0-9@\.\#\$\*\-]{8,32}$"></trap_auth_password>
+    <trap_privacy_algorithm type="enum" desc="Privacy Algorithm" range="des aes" default="des">des</trap_privacy_algorithm>
+    <trap_privacy_password type="regex" desc="Privacy Password" pattern="^[a-zA-Z0-9@\.\#\$\*\-]{8,32}$"></trap_privacy_password>
+    <system_startup type="bool" desc="System Startup" default="false">false</system_startup>
+    <system_reboot type="bool" desc="System Reboot" default="false">false</system_reboot>
+    <system_time_updated type="bool" desc="System Time Update" default="false">false</system_time_updated>
+    <config_changed type="bool" desc="Configuration Change" default="false">false</config_changed>
+    <cellular_network_type_changed type="bool" desc="Cellular Network Type Change" default="false">false</cellular_network_type_changed>
+    <cellular_data_stats_clear type="bool" desc="Cellular Data Stats Clear" default="false">false</cellular_data_stats_clear>
+    <cellular_data_traffic_overflow type="bool" desc="Cellular Data Traffic Overflow" default="false">false</cellular_data_traffic_overflow>
+    <poor_signal_quality type="bool" desc="Poor Signal Quality" default="false">false</poor_signal_quality>
+    <link_switch type="bool" desc="Link Switching" default="false">false</link_switch>
+    <wan_up type="bool" desc="WAN Up" default="false">false</wan_up>
+    <wan_down type="bool" desc="WAN Down" default="false">false</wan_down>
+    <wwan_up type="bool" desc="WWAN Up" default="false">false</wwan_up>
+    <wwan_down type="bool" desc="WWAN Down" default="false">false</wwan_down>
+    <ipsec_up type="bool" desc="IPSec Connection Up" default="false">false</ipsec_up>
+    <ipsec_down type="bool" desc="IPSec Connection Down" default="false">false</ipsec_down>
+    <openvpn_up type="bool" desc="OpenVPN Connection Up" default="false">false</openvpn_up>
+    <openvpn_down type="bool" desc="OpenVPN Connection Down" default="false">false</openvpn_down>
+    <lan_port_up type="bool" desc="LAN Port Link Up" default="false">false</lan_port_up>
+    <lan_port_down type="bool" desc="LAN Port Link Down" default="false">false</lan_port_down>
+    <usb_connected type="bool" desc="USB Device Connect" default="false">false</usb_connected>
+    <usb_removed type="bool" desc="USB Device Remove" default="false">false</usb_removed>
+    <ddns_update_success type="bool" desc="DDNS Update Success" default="false">false</ddns_update_success>
+    <ddns_update_fail type="bool" desc="DDNS Update Fail" default="false">false</ddns_update_fail>
+    <sms_received type="bool" desc="Received SMS" default="false">false</sms_received>
+    <sms_cmd_executed type="bool" desc="SMS Command Execute" default="false">false</sms_cmd_executed>
+    <di1_on type="bool" desc="DI 1 ON" default="false">false</di1_on>
+    <di1_off type="bool" desc="DI 1 OFF" default="false">false</di1_off>
+    <di1_counter_overflow type="bool" desc="DI 1 Counter Overflow" default="false">false</di1_counter_overflow>
+    <di2_on type="bool" desc="DI 2 ON" default="false">false</di2_on>
+    <di2_off type="bool" desc="DI 2 OFF" default="false">false</di2_off>
+    <di2_counter_overflow type="bool" desc="DI 2 Counter Overflow" default="false">false</di2_counter_overflow>
+    <di3_on type="bool" desc="DI 3 ON" default="false">false</di3_on>
+    <di3_off type="bool" desc="DI 3 OFF" default="false">false</di3_off>
+    <di3_counter_overflow type="bool" desc="DI 3 Counter Overflow" default="false">false</di3_counter_overflow>
+    <di4_on type="bool" desc="DI 4 ON" default="false">false</di4_on>
+    <di4_off type="bool" desc="DI 4 OFF" default="false">false</di4_off>
+    <di4_counter_overflow type="bool" desc="DI 4 Counter Overflow" default="false">false</di4_counter_overflow>
+    <excessive_temperature type="bool" desc="Excessive Temperature" default="false">false</excessive_temperature>
+  </snmp>
+  <ssh>
+    <enable type="bool" desc="Enable" default="true">true</enable>
+    <port type="int" desc="Port" range="1..65535" default="22">22</port>
+    <disable_passwd_login type="bool" desc="Disable Password Logins" default="false">false</disable_passwd_login>
+  </ssh>
+  <syslog>
+    <enable type="bool" desc="Enable" default="true">true</enable>
+    <level type="enum" desc="Syslog Level" range="debug info notice warning err" default="debug">info</level>
+    <save_position type="enum" desc="Save Position" range="ram nvm console" default="ram">ram</save_position>
+    <log_to_remote type="bool" desc="Log to Remote" default="false">false</log_to_remote>
+    <add_identifier type="bool" desc="Add Identifier" default="false">false</add_identifier>
+    <remote_ip type="IP_ADDR" desc="Remote IP Address"></remote_ip>
+    <remote_port type="int" desc="Remote Port" range="1..65535" default="514">514</remote_port>
+  </syslog>
+  <system>
+    <device_name type="regex" desc="Device Name" default="router" pattern="^[a-zA-Z0-9\.\-]+$">RENAME-hostname</device_name>
+    <usr_led_type type="enum" desc="User LED Type" range="none sim net gps wifi openvpn robustvpn ipsec" default="none">openvpn</usr_led_type>
+  </system>
+  <usb>
+    <enable type="bool" desc="Enable USB" default="true">true</enable>
+    <auto_update type="bool" desc="Enable Automatic Upgrade" default="true">false</auto_update>
+  </usb>
+  <user_management>
+    <username type="regex" desc="Username" default="admin" pattern="^[a-zA-Z0-9@\#\$\*\.\!][a-zA-Z0-9@\#\$\*\.\!\-]{4,32}$">admin</username>
+    <password type="regex" desc="Password" default="admin" pattern="^[a-zA-Z0-9@\#\$\*\.\!][a-zA-Z0-9@\#\$\*\.\!\-]{4,32}$">S8ThaCGBPjdmZuRXgD1of38MMhVSrYsu</password>
+    <user_list max_entry_num="5">
+      <id type="int" desc="Index" range="1..5"/>
+      <role type="enum" desc="Role" range="editor visitor" default="visitor"/>
+      <username type="regex" desc="Username"/>
+      <password type="regex" desc="Password"/>
+    </user_list>
+  </user_management>
+  <web_server>
+    <http_port type="int" desc="HTTP Port" range="1..65535" default="80">80</http_port>
+    <https_port type="int" desc="HTTPS Port" range="1..65535" default="443">443</https_port>
+  </web_server>
+</config_xml>

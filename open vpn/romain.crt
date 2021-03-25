@@ -1,0 +1,73 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 30 (0x1e)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=CN, ST=GuangDong, L=GuangZhou, O=Robustel, OU=RobustVPN.com, CN=Robustel CA/emailAddress=info@robustel.com
+        Validity
+            Not Before: May 19 04:37:21 2020 GMT
+            Not After : May 17 04:37:21 2030 GMT
+        Subject: C=CN, ST=GuangDong, L=GuangZhou, O=Robustel, OU=RobustVPN.com, CN=romain/emailAddress=info@robustel.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:c5:bb:8f:55:5c:2c:a3:76:d8:f1:0d:9d:17:c6:
+                    8a:95:53:b3:19:45:50:15:7e:3a:13:be:c8:81:fd:
+                    68:2f:5c:40:0d:c5:7b:9e:40:5d:41:4a:c9:e3:85:
+                    04:e1:ef:8c:13:2c:22:93:e7:ef:0c:1d:d8:dd:27:
+                    81:15:ab:16:d3:bb:6c:5f:eb:53:02:d9:2f:c2:76:
+                    af:27:de:68:2f:93:0f:07:bc:9f:5d:16:2e:c5:77:
+                    9b:39:af:12:33:ea:ef:25:23:59:aa:4c:61:37:3b:
+                    45:79:8b:e2:03:0f:cb:f9:6e:9a:b1:e7:67:c8:9d:
+                    b4:b3:19:68:ab:5c:01:27:89
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                6F:87:30:26:8F:91:69:94:B7:D0:80:1F:22:C0:36:A1:FF:D8:9A:92
+            X509v3 Authority Key Identifier: 
+                keyid:9B:6E:B5:0E:76:B7:0E:F8:05:10:C1:88:D3:A1:FF:11:8A:80:B4:38
+                DirName:/C=CN/ST=GuangDong/L=GuangZhou/O=Robustel/OU=RobustVPN.com/CN=Robustel CA/emailAddress=info@robustel.com
+                serial:8D:97:26:0C:21:73:CF:C9
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+         84:68:c3:97:37:01:ac:0a:2a:26:b2:a6:80:eb:f8:5c:90:fe:
+         ca:cd:47:53:0a:fd:36:ae:84:2c:d0:09:48:43:7f:7f:c9:da:
+         e8:05:ce:08:18:c4:08:e0:23:e6:9a:9a:02:4e:fc:58:28:2e:
+         51:33:f7:ef:a7:1a:3a:be:2d:c1:85:c2:3f:af:33:6d:74:21:
+         99:11:4d:13:96:69:3b:14:aa:3f:f3:5c:d0:af:df:51:02:cd:
+         e5:c5:1e:51:46:fd:14:fb:fa:2e:62:96:ce:95:f8:f3:96:a1:
+         87:56:6d:8f:22:eb:b4:18:df:28:76:75:db:d6:77:5d:db:0d:
+         c8:e9
+-----BEGIN CERTIFICATE-----
+MIID9DCCA12gAwIBAgIBHjANBgkqhkiG9w0BAQUFADCBmDELMAkGA1UEBhMCQ04x
+EjAQBgNVBAgTCUd1YW5nRG9uZzESMBAGA1UEBxMJR3VhbmdaaG91MREwDwYDVQQK
+EwhSb2J1c3RlbDEWMBQGA1UECxMNUm9idXN0VlBOLmNvbTEUMBIGA1UEAxMLUm9i
+dXN0ZWwgQ0ExIDAeBgkqhkiG9w0BCQEWEWluZm9Acm9idXN0ZWwuY29tMB4XDTIw
+MDUxOTA0MzcyMVoXDTMwMDUxNzA0MzcyMVowgZMxCzAJBgNVBAYTAkNOMRIwEAYD
+VQQIEwlHdWFuZ0RvbmcxEjAQBgNVBAcTCUd1YW5nWmhvdTERMA8GA1UEChMIUm9i
+dXN0ZWwxFjAUBgNVBAsTDVJvYnVzdFZQTi5jb20xDzANBgNVBAMTBnJvbWFpbjEg
+MB4GCSqGSIb3DQEJARYRaW5mb0Byb2J1c3RlbC5jb20wgZ8wDQYJKoZIhvcNAQEB
+BQADgY0AMIGJAoGBAMW7j1VcLKN22PENnRfGipVTsxlFUBV+OhO+yIH9aC9cQA3F
+e55AXUFKyeOFBOHvjBMsIpPn7wwd2N0ngRWrFtO7bF/rUwLZL8J2ryfeaC+TDwe8
+n10WLsV3mzmvEjPq7yUjWapMYTc7RXmL4gMPy/lumrHnZ8idtLMZaKtcASeJAgMB
+AAGjggFPMIIBSzAJBgNVHRMEAjAAMC0GCWCGSAGG+EIBDQQgFh5FYXN5LVJTQSBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFG+HMCaPkWmUt9CAHyLANqH/
+2JqSMIHNBgNVHSMEgcUwgcKAFJtutQ52tw74BRDBiNOh/xGKgLQ4oYGepIGbMIGY
+MQswCQYDVQQGEwJDTjESMBAGA1UECBMJR3VhbmdEb25nMRIwEAYDVQQHEwlHdWFu
+Z1pob3UxETAPBgNVBAoTCFJvYnVzdGVsMRYwFAYDVQQLEw1Sb2J1c3RWUE4uY29t
+MRQwEgYDVQQDEwtSb2J1c3RlbCBDQTEgMB4GCSqGSIb3DQEJARYRaW5mb0Byb2J1
+c3RlbC5jb22CCQCNlyYMIXPPyTATBgNVHSUEDDAKBggrBgEFBQcDAjALBgNVHQ8E
+BAMCB4AwDQYJKoZIhvcNAQEFBQADgYEAhGjDlzcBrAoqJrKmgOv4XJD+ys1HUwr9
+Nq6ELNAJSEN/f8na6AXOCBjECOAj5pqaAk78WCguUTP376caOr4twYXCP68zbXQh
+mRFNE5ZpOxSqP/Nc0K/fUQLN5cUeUUb9FPv6LmKWzpX485ahh1ZtjyLrtBjfKHZ1
+29Z3XdsNyOk=
+-----END CERTIFICATE-----
